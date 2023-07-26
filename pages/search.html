@@ -1,0 +1,348 @@
+<script>
+if(localStorage.lang && localStorage.lang == 'dark'){
+        document.documentElement.style.setProperty('--first', '#1B1B1B');
+        document.documentElement.style.setProperty('--second', '#fff');
+        /*document.documentElement.style.setProperty('--second', '#1B1B1B');
+        document.documentElement.style.setProperty('--third', '#fff');
+        document.documentElement.style.setProperty('--forth', '#ecefef');
+        document.documentElement.style.setProperty('--fifth', 'none');
+        document.documentElement.style.setProperty('--six', '#ecefef');
+        document.documentElement.style.setProperty('--seventh', '#E2F8F7');
+        document.documentElement.style.setProperty('--eight', '#44C9C5');*/
+}
+</script>
+<style>
+    :root {
+        --first: #fff;
+        --second: #000;
+    }
+    
+    .search-menu-choice{
+        width: 97.5%;
+        height: 5.5vw;
+        background: var(--first);
+        border-radius: 1.5vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .search-menu-choice>select{
+        width: 13%;
+        height: 100%;
+        outline: none;
+        border: 0;
+        font-size: 1.3vw;
+        background: var(--first);
+        color: var(--second);
+    }
+    
+    .search-menu-choice>input{
+        height: 100%;
+        width: 78%;
+        border: 0;
+        outline: none;
+        font-size: 1.5vw;
+        background: var(--first);
+        color: var(--second);
+    }
+    
+    .search-container-settings{
+        width: 97.5%;
+        height: 11vw;
+/*        background: red;*/
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .search-container-settings>select{
+        border: 0;
+        width: 20%;
+        height: 5vw;
+        border-radius: 2vw;
+        padding: 0 3%;
+        outline: none;
+        font-size: 1.3vw;
+        background: var(--first);
+        color: var(--second);
+    }
+    
+    .search-filter-result{
+        display: flex;
+        flex-direction: column;
+        width: 97.5%;
+        min-height: 45vw;
+        background: var(--first);
+        border-radius: 2vw;
+    }
+    
+    .search-filter-result-container{
+        width: 100%;
+        height: auto;
+/*        background: red;*/
+    }
+    
+    .search-filter-result-div,.search-filter-result-div_p{
+/*        background: green;*/
+        width: 21.25%;
+        height: 21vw;
+        margin-left: 3%;
+        border-radius: 1.3vw;
+        background: linear-gradient(45deg, rgb(68, 201, 197), rgb(246, 56, 103)) border-box border-box;
+/*        border-image: conic-gradient(rgb(68, 201, 197), rgb(246, 56, 103)) 0 / 1 / 0 stretch;*/
+        filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 1px 3px);
+        float: left;
+    }
+    
+    .search-filter-result-div>img,.search-filter-result-div_p>img{
+        width: 98%;
+        height: 98%;
+        padding: 1%;
+        border-radius: 1.3vw;
+    }
+    
+    .search-filter-result-div-dark,.search-filter-result-div-dark_p{
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        width: 98%;
+        height: 98%;
+        background: rgba(0,0,0,.6);
+        border-radius: 1vw;
+        color: #fff;
+        font-size: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .search-filter-result-div-play,.search-filter-result-div-play_p{
+        display: none;
+        width: 4vw;
+        height: 4vw;
+        background: #F63867;
+        border-radius: 50%;
+        position: absolute;
+        right: 7%;
+        bottom: 6%;
+    }
+    
+    .search-filter-result-div:hover>.search-filter-result-div-play, .search-filter-result-div_p:hover>.search-filter-result-div-play_p{
+        display: block;
+    }
+    
+    .search-filter-result-div-play>div,.search-filter-result-div-play_p>div{
+        margin: 21% 0 0 34%;
+        border: 1.2vw solid transparent;
+        border-left: 1.8vw solid #fff;
+    }
+</style>
+
+<div class="search-menu-choice">
+    <select onchange="search_filter=this.value">
+        <option>News/podcasts</option>
+        <option>Only news</option>
+        <option>Only podcasts</option>
+    </select>
+    
+    <input id="search" oninput="search_input(this.value)" type="search" placeholder="Поиск">
+</div>
+
+<div class="search-container-settings">
+    <select id="pod_news" onchange="filter()">
+        <option>Podcast & News</option>
+        <option>Podcast</option>
+        <option>News</option>
+    </select>
+    
+    <select id="languages" onchange="filter()">
+        <option>All languages</option>
+        <option>English</option>
+        <option>Russian</option>
+        <option>Japan</option>
+        <option>Jerman</option>
+        <option>Italian</option>
+    </select>
+    
+    <select id="news_type" onchange="filter()">
+        <option>All news type</option>
+        <option>music</option>
+        <option>news</option>
+        <option>advertising</option>
+    </select>
+    
+    <select id="podcasts_type" onchange="filter()">
+        <option>All podcasts type</option>
+        <option>music</option>
+        <option>news</option>
+        <option>advertising</option>
+    </select>
+</div>
+
+<div class="search-filter-result">
+    <div class="search-filter-result-container"></div>
+    <div class="search-filter-result-container"></div>
+</div>
+
+
+<script src="sound.js"></script>
+<script>        
+var search_filter = 'News/podcasts';
+function search_input(qw){
+    if(qw != ''){  
+        if(search_filter == 'News/podcasts'){
+            for(var i=0;i<document.getElementsByClassName('search-filter-result-div').length;i++){
+                if(document.getElementsByClassName('search-filter-result-div')[i].style.display != 'none'){
+                    var ss='';
+                    for(var q=0;q<document.getElementsByClassName('search-filter-result-div-news-text')[i].innerText.length;q++){
+                        if(document.getElementsByClassName('search-filter-result-div-news-text')[i].innerText.substr(q,qw.length) == qw){
+                            ss+='<mark>'+document.getElementsByClassName("search-filter-result-div-news-text")[i].innerText.substr(q,qw.length)+'</mark>';
+                            q+=(qw.length - 1);
+                        }else{
+                            ss+=document.getElementsByClassName('search-filter-result-div-news-text')[i].innerText[q];
+                        }
+
+                    }
+                    document.getElementsByClassName('search-filter-result-div-news-text')[i].innerHTML=ss;
+                }
+            }
+            
+            
+            for(var i=0;i<document.getElementsByClassName('search-filter-result-div_p').length;i++){
+                if(document.getElementsByClassName('search-filter-result-div_p')[i].style.display != 'none'){
+                    var ss='';
+                    for(var q=0;q<document.getElementsByClassName('search-filter-result-div-podcasts-text')[i].innerText.length;q++){
+                        if(document.getElementsByClassName('search-filter-result-div-podcasts-text')[i].innerText.substr(q,qw.length) == qw){
+                            ss+='<mark>'+document.getElementsByClassName("search-filter-result-div-podcasts-text")[i].innerText.substr(q,qw.length)+'</mark>';
+                            q+=(qw.length - 1);
+                        }else{
+                            ss+=document.getElementsByClassName('search-filter-result-div-podcasts-text')[i].innerText[q];
+                        }
+
+                    }
+                    document.getElementsByClassName('search-filter-result-div-podcasts-text')[i].innerHTML=ss;
+                }
+            }
+        }else if(search_filter == 'Only news'){
+            for(var i=0;i<document.getElementsByClassName('search-filter-result-div').length;i++){
+                if(document.getElementsByClassName('search-filter-result-div')[i].style.display != 'none'){
+                    var ss='';
+                    for(var q=0;q<document.getElementsByClassName('search-filter-result-div-news-text')[i].innerText.length;q++){
+                        if(document.getElementsByClassName('search-filter-result-div-news-text')[i].innerText.substr(q,qw.length) == qw){
+                            ss+='<mark>'+document.getElementsByClassName("search-filter-result-div-news-text")[i].innerText.substr(q,qw.length)+'</mark>';
+                            q+=(qw.length - 1);
+                        }else{
+                            ss+=document.getElementsByClassName('search-filter-result-div-news-text')[i].innerText[q];
+                        }
+
+                    }
+                    document.getElementsByClassName('search-filter-result-div-news-text')[i].innerHTML=ss;
+                }
+            }
+        }else{
+            for(var i=0;i<document.getElementsByClassName('search-filter-result-div_p').length;i++){
+                if(document.getElementsByClassName('search-filter-result-div_p')[i].style.display != 'none'){
+                    var ss='';
+                    for(var q=0;q<document.getElementsByClassName('search-filter-result-div-podcasts-text')[i].innerText.length;q++){
+                        if(document.getElementsByClassName('search-filter-result-div-podcasts-text')[i].innerText.substr(q,qw.length) == qw){
+                            ss+='<mark>'+document.getElementsByClassName("search-filter-result-div-podcasts-text")[i].innerText.substr(q,qw.length)+'</mark>';
+                            q+=(qw.length - 1);
+                        }else{
+                            ss+=document.getElementsByClassName('search-filter-result-div-podcasts-text')[i].innerText[q];
+                        }
+
+                    }
+                    document.getElementsByClassName('search-filter-result-div-podcasts-text')[i].innerHTML=ss;
+                }
+            }
+        }
+    }else{
+        for(var i=0;i<document.getElementsByClassName('search-filter-result-div').length;i++){
+            if(document.getElementsByClassName('search-filter-result-div')[i].style.display != 'none'){
+                document.getElementsByClassName('search-filter-result-div-news-text')[i].innerHTML = document.getElementsByClassName('search-filter-result-div-news-text')[i].innerText;
+            }
+        }
+        
+        for(var i=0;i<document.getElementsByClassName('search-filter-result-div_p').length;i++){
+            if(document.getElementsByClassName('search-filter-result-div_p')[i].style.display != 'none'){
+                document.getElementsByClassName('search-filter-result-div-podcasts-text')[i].innerHTML = document.getElementsByClassName('search-filter-result-div-podcasts-text')[i].innerText;
+            }
+        }
+    }
+}
+   
+    
+    
+    
+function filter(){
+    if(document.getElementById('pod_news').value == 'News' || document.getElementById('pod_news').value == 'Podcast & News'){
+        for(var q in news){
+           if((document.getElementById('languages').value == news[q].lang || document.getElementById('languages').value == 'All languages') && (document.getElementById('news_type').value == news[q].type || document.getElementById('news_type').value == 'All news type')){
+               document.getElementsByClassName('search-filter-result-div')[q].style.display='block';
+           }else{
+               document.getElementsByClassName('search-filter-result-div')[q].style.display='none';
+           }
+        }
+    }
+    
+    if(document.getElementById('pod_news').value == 'Podcast' || document.getElementById('pod_news').value == 'Podcast & News'){
+       
+    }
+}
+    
+  
+    
+    
+    
+    
+
+var search_filter_news='';
+var search_filter_podcasts='';
+for(var i in news){
+    search_filter_news+='<div class="search-filter-result-div"><img src="'+news[i].audio_img+'"><div class="search-filter-result-div-dark"><p class="search-filter-result-div-news-text">'+news[i].audio_name+'</p><b class="search-filter-result-div-news-text2">'+news[i].author+'</b></div><div class="search-filter-result-div-play"><div data-id="'+news[i].id+'" class="load_track"></div></div></div>';
+}
+document.getElementsByClassName('search-filter-result-container')[0].innerHTML=search_filter_news;
+  
+    
+for(var i in podcasts){
+    search_filter_podcasts+='<div class="search-filter-result-div_p"><img src="'+podcasts[i].audio_img+'"><div class="search-filter-result-div-dark_p"><b class="search-filter-result-div-podcasts-text">'+podcasts[i].podcast_name+'</b></div><div class="search-filter-result-div-play_p"><div data-id="'+podcasts[i].id+'" class="load_track_p"></div></div></div>';
+}
+document.getElementsByClassName('search-filter-result-container')[1].innerHTML=search_filter_podcasts;
+    
+    
+  
+    
+    
+window.onclick=e=>{
+    if(e.target.className == 'load_track' || e.target.className == 'search-filter-result-div-play'){
+        var news_massiv=[];
+        var track_id=-1;
+        for(var i=0;i<document.getElementsByClassName('search-filter-result-div').length;i++){
+            if(document.getElementsByClassName('search-filter-result-div')[i].style.display != 'none'){
+                track_id++;
+                news_massiv.push(news[document.getElementsByClassName('load_track')[i].getAttribute('data-id')]);
+                if(e.target.getAttribute('data-id') || e.target.firstChild.getAttribute('data-id') == news[document.getElementsByClassName('load_track')[i].getAttribute('data-id')].id){
+                    localStorage.track_id =track_id;
+                }
+            }
+        }
+        window.parent.postMessage(news_massiv , '*');
+    }else if(e.target.className == 'load_track_p' || e.target.className == 'search-filter-result-div-play_p'){   
+         localStorage.track_id =0;
+         window.parent.postMessage(podcasts[e.target.getAttribute('data-id') || e.target.firstChild.getAttribute('data-id')] , '*');
+    }
+}
+
+
+window.onmessage = function(event) {
+    if( event.data == 'dark_theme'){
+       document.documentElement.style.setProperty('--first', '#1B1B1B');
+       document.documentElement.style.setProperty('--second', '#fff');
+    }else{
+       document.documentElement.style.setProperty('--first', '#fff');
+       document.documentElement.style.setProperty('--second', '#000');
+    }
+};
+</script>

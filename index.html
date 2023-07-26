@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InVoice.com</title>
+</head>
+<body>
+<script>
+   if(localStorage.lang && localStorage.lang == 'dark'){
+        document.documentElement.style.setProperty('--first', '#141414');
+        document.documentElement.style.setProperty('--second', '#1B1B1B');
+        document.documentElement.style.setProperty('--third', '#fff');
+        document.documentElement.style.setProperty('--forth', '#ecefef');
+        document.documentElement.style.setProperty('--fifth', 'none');
+        document.documentElement.style.setProperty('--six', '#ecefef');
+        document.documentElement.style.setProperty('--seventh', '#E2F8F7');
+        document.documentElement.style.setProperty('--eight', '#44C9C5');
+   }
+</script>
+<style>
+    :root {
+        --first: #EBECF0;
+        --second: #fff;
+        --third: #000;
+        --forth: #0C1827;
+        --fifth:#E2F8F7;
+        --six:#44C9C5;
+        --seventh:none;
+        --eight:#0C1827;
+    }
+    
+    body{
+        background: var(--first);
+        margin: 0;
+        padding: 0;
+    }  
+    
+    .player_container{
+        position: fixed;
+        top: 0;
+        width: 18.5%;
+        height: 100%;
+        background: var(--second);
+        border-radius: 0 3vw 3vw 0;
+        display: flex;
+        flex-direction: column;
+        color: var(--third);
+    }
+    
+    .player_container_block1{
+        height: 48%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .player_container_block1_animate{
+        height: 12%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5vw;
+    }
+    
+    .player_container_block1_animate_b1{
+        width: 4%;
+        height: 10%;
+        background: #40b5ca;
+        margin-right: 2%;
+        animation: animate1  1s infinite ease-out;
+    }
+    
+    @keyframes animate1{
+        0%{height: 10%;}
+        50%{height: 35%;}
+        100%{height: 10%;}
+    }
+    
+    .player_container_block1_animate_b2{
+        width: 4%;
+        height: 80%;
+        background: #4ef6f1;
+        margin-right: 2%;
+        animation: animate2  1s infinite ease-out;
+    }
+    
+    @keyframes animate2{
+        0%{height: 80%;}
+        50%{height: 100%;}
+        100%{height: 80%;}
+    }
+    
+    .player_container_block1_animate_b3{
+        width: 4%;
+        height: 40%;
+        background: #40b5ca;
+        margin-right: 2%;
+        animation: animate3  1s infinite ease-out;
+    }
+    
+    .player_container_block2_b3>input{
+        
+    }
+    
+    @keyframes animate3{
+        0%,100%{height: 40%;}
+        50%{height: 65%;}
+    }
+    
+    .player_container_block1_animate_b4{
+        width: 4%;
+        height: 75%;
+        background: #4ef6f1;
+        margin-right: 2%;
+        animation: animate4  1s infinite ease-out;
+    }
+    
+    @keyframes animate4{
+        0%{height: 75%;}
+        50%{height: 100%;}
+        100%{height: 75%;}
+    }
+    
+    .player_container_block1_animate_b5{
+        width: 4%;
+        height: 13%;
+        background: #40b5ca;
+        animation: animate5  1s infinite ease-out;
+    }
+    
+    @keyframes animate5{
+        0%{height: 13%;}
+        50%{height: 38%;}
+        100%{height: 13%;}
+    }
+    
+    .player_container_block1_pages{
+        height: 14%;
+        display: flex;
+        width: 82%;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        font-size: 1.5vw;
+        border-radius: 1vw;
+    }
+    
+    .settings_div{
+        display: none;
+        background: #fff;
+        width: 83%;
+        position: absolute;
+        bottom: 100%;
+        left: -5%;
+        border-radius: 8px; 
+        padding: 5% 0;
+        border: 2px solid #EBECF0;
+        box-shadow: 0 0 1vw rgb(168 168 168 / 25%);
+    }
+    
+    .settings_div>div{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 4%;
+    }
+    
+    .settings_div>div>svg{
+        width: 19%;
+    }
+    
+    .settings_div>div>select{
+        width: 50%;
+    }
+    
+    .player_container_block1_pages:nth-child(5){
+        border-bottom: 1px solid #EBECF0;
+    }
+
+    .player_container_block1_pages>svg{
+        width: 12%;
+        margin-right: 8%;
+        margin-left: 7%;
+        stroke: var(--forth);
+    }
+     
+    .player_container_block1_pages>.light_theme, .player_container_block1_pages>.dark_theme{
+        padding: 3%;
+        border-radius: 1vw;
+    }
+    
+    .player_container_block1_pages>.light_theme{
+        margin-left: 21%;
+        margin-right: -2%;
+        background: var(--fifth);
+        stroke: var(--six);
+    }
+    
+    .player_container_block1_pages>.dark_theme{
+        background: var(--seventh);
+        stroke: var(--eight);
+    }
+
+    .player_container_block2{
+        height: 52%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5%;
+    }
+    
+    .player_container_block2_b1{
+        height: 10%;
+        width: 82%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    
+    .player_container_block2_b2{
+        height: 50%;
+        width: 82%;
+        margin-bottom: 2%;
+    }
+    
+    .player_container_block2_b2>img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .player_container_block2_b3{
+        height: 5%;
+        width: 82%;
+    }
+    
+    .player_container_block2_b3>input{
+        -webkit-appearance: none;
+        width: 100%;
+        height: 18%;
+        background: #d9d9d9;
+        border-radius: 8vw;
+        background-image: linear-gradient(#44c9c5, #44c9c5);
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .player_container_block2_b3>input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: .4vw;
+        width: .4vw;
+        border-radius: 50%;
+        background: #f63867;
+    }
+
+    .player_container_block2_b3>input::-moz-range-thumb {
+        -webkit-appearance: none;
+        height: .4vw;
+        width: .4vw;
+        border-radius: 50%;
+        background: #f63867;
+    }
+
+    .player_container_block2_b3>input::-ms-thumb {
+        -webkit-appearance: none;
+        height: .4vw;
+        width: .4vw;
+        border-radius: 50%;
+        background: #f63867;
+    }
+
+    .player_container_block2_b3>input::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+    }
+
+    .player_container_block2_b3>input::-moz-range-track {
+        -webkit-appearance: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+    }
+
+    .player_container_block2_b3>input::-ms-track {
+        -webkit-appearance: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+    }
+    
+    .player_container_block2_b4{
+        height: 5%;
+        width: 82%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2%;
+        color: #969696;
+        font-family: Inter,sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: .8vw;
+    }
+    
+    .player_container_block2_b5,.player_container_block2_b6{
+        height: 7%;
+        width: 82%;
+        display: flex;
+        align-items: center;
+        font-size: 1vw;
+        justify-content: center;
+        color: #969696;
+        font-family: Inter,sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    
+    .player_container_block2_b5>marquee{
+        color: var(--third);
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    
+    
+    .player_container_block2_b7{
+        height: 17%;
+        width: 82%;
+        margin-bottom: 3%;
+        margin-top: 3%;
+    }
+    
+    .player_container_block2_b7_podcast,.player_container_block2_b7_news{
+        display: none;
+    }
+    
+    .player_container_block2_b7_podcast{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .player_container_block2_b7_podcast_b1,.player_container_block2_b7_podcast_b2{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: -5%;
+    }
+    
+    .player_container_block2_b7_podcast_b2{
+        width: 94%;
+        margin-left: 3%;
+        position: relative;
+        height: 50%;
+        display: flex;
+        align-items: center;
+   }
+    
+    .player_container_block2_b7_podcast_b1, .player_container_block2_b7_podcast_b2 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0%;
+    }
+    
+    .player_container_block2_b7_podcast_b2>div{
+        color: #969696;
+        font-weight: 600;
+        font-size: 1.6vw;
+    }
+    
+    .player_container_block2_b7_podcast_b2>div>div{
+        display: none;
+        background: #fff;
+        border: 2px solid #EBECF0;
+        border-radius: 8px;
+        width: 55%;
+        position: absolute;
+        bottom: 92%;
+        left: -10%;
+        flex-direction: column;
+        align-items: center;
+        color: #0C1827;
+        font-weight: 400;
+        justify-content: center;
+        box-shadow: 0 0 1vw rgb(168 168 168 / 25%);
+    }
+    
+    .player_container_block2_b7_podcast_b2>div>div>p:hover{
+        background: #F5F6FA;
+        width: 8;
+        width: 80%;
+        text-align: center;
+        padding: 0 1;
+        border-radius: 0.6vw;
+    }
+    
+    .player_container_block2_b7_podcast_b1>svg,.player_container_block2_b7_podcast_b2>svg{
+        width: 11%;
+    }
+    
+    .player_container_block2_b1_menu{
+        width: 160%;
+        height: 69%;
+        background: var( --second);
+        position: absolute;
+        top: 17%;
+        right: -170%;
+        border-radius: 0 2vw 2vw 0;
+        border-width: 1px 1px 1px 0px;
+        border-style: solid;
+        border-color: #EBECF0;
+        box-shadow: 1px 0 8px rgb(168 168 168 / 25%);
+        padding: 5% 5% 0 5%;
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .player_container_block2_b1_menu_bl1{
+        width: 100%;
+        height: 8.5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .player_container_block2_b1_menu_bl1_container1{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        font-size: 2vw;
+    }
+    
+    .player_container_block2_b1_menu_bl1_container2{
+        width: 40%;
+        border: 1px solid #44c9c5;
+        border-radius: 8px;
+        display: flex;
+    }
+    
+    .player_container_block2_b1_menu_bl1_container2>div{
+        width: 50%;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .player_container_block2_b1_menu_bl2_news,.player_container_block2_b1_menu_bl2_podcasts{
+        display: none;
+        width: 100%;
+        height: 80%;
+        overflow-x: auto;
+        flex-direction: column;
+    }
+    
+    .player_container_block2_b1_menu_bl2_news::-webkit-scrollbar,.player_container_block2_b1_menu_bl2_podcasts::-webkit-scrollbar {
+      width: .6vw;  
+    }
+
+    .player_container_block2_b1_menu_bl2_news::-webkit-scrollbar-track,.player_container_block2_b1_menu_bl2_podcasts::-webkit-scrollbar-track {
+        background: #F5F6FA;
+    }
+
+    .player_container_block2_b1_menu_bl2_news::-webkit-scrollbar-thumb,.player_container_block2_b1_menu_bl2_podcasts::-webkit-scrollbar-thumb {
+      background-color: #d6d6d6;  
+      border-radius: 20px;  
+    }
+    
+                        .some{
+                            width: 100%;
+                            height: 7vw;
+                            border-bottom: 1px solid #EBECF0;
+                            display: flex;
+                        }
+                        
+                        .some1{
+                           width: 30%;
+                           height: 100%;
+                           position: relative;
+                           display: flex;
+                           align-items: center;
+                        }
+                        
+                        .some1>img{
+                            width: 80%;
+                            height: 80%;
+                        }
+    
+                        .some1>div{
+                            width: 80%;
+                            height: 80%;
+                            position: absolute;
+                            top: 10%;
+                            left: 0;
+                            background: rgba(0,0,0,0.6);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        
+                        .some2{
+                            width: 60%;
+                            height: 100%;
+                            position: relative;
+                        }
+    
+                        .some2_text{
+                            height: 40%;
+                            font:600 1vw Arial;
+                            position: absolute;
+                            top: -7%;  
+                        }
+    
+                        .some2_container{
+                            height: 32%;
+                            width: 100%;
+                            display: flex;
+                            position: absolute;
+                            top: 63%;
+                        }
+    
+                        .some2_container>div{
+                            width: 50%;
+                            display: flex;
+                            font-size: 1vw;
+                            align-items: center;
+                        }
+                        
+                        .some2_container>div>svg{
+                            width: 24%;
+                        }
+    
+                        .some3{
+                            width: 10%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                        }
+ 
+                        .some3>div{
+                            width: 65%;
+                            height: 57%;
+                            background: var( --second);
+                            position: absolute;
+                            top: 28%;
+                            right: -67%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 8px;
+                            border: 2px solid #EBECF0;
+                            box-shadow: 0 0 1vw rgb(168 168 168 / 25%);
+                        }
+    
+    
+                        .some3>div>div{
+                            width: 92%;
+                            height: 25%;
+                            display: flex;
+                            align-items: center;
+                            font-size: 1.4vw;
+                            border-radius: 8px;
+                            justify-content: flex-start;
+                            padding-left: 8%;
+                        }
+    
+                        .some3>div>div:hover{
+                            background: #F5F6FA;
+                        }
+    
+                        .some3>div>div>svg{
+                            width: 19%;
+                            margin-right: 9%;
+                        }
+    
+    .container_page{
+        position: absolute;
+        right: 0%;
+        top: 0;
+        width: 79%;
+        height: 100%;
+        border: 0;
+    }
+   
+    #play_stop{
+        width: 15%;
+    }
+    
+.l:nth-child(1),.l:nth-child(5) {
+    animation-delay: -0.2s !important;
+    width: 3px;
+    height: 11px;
+    border-radius: 1px;
+    margin: 3px 2px 3px 0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: inline-block;
+    background-color: #fff;
+    -webkit-animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.85, 0.87, 0.85);
+    animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.85, 0.87, 0.85);
+}
+    
+    
+.l:nth-child(2) {
+    animation-delay: -0.4s !important;
+    width: 3px;
+    border-radius: 1px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: inline-block;
+    background-color: #fff;
+    height: 16px;
+    margin: 2px 3px 1px 0;
+    -webkit-animation: line-scale-pulse-out2 0.9s -0.6s infinite cubic-bezier(0.85, 0.85, 0.87, 0.85);
+    animation: line-scale-pulse-out2 0.9s -0.6s infinite cubic-bezier(0.85, 0.85, 0.87, 0.85);
+}
+    
+.l:nth-child(3) {
+    width: 3px;
+    height: 11px;
+    border-radius: 1px;
+    margin: 2px 2px 2px 0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: inline-block;
+    background-color: #fff;
+    -webkit-animation: line-scale-pulse-out4 0.9s -0.6s infinite cubic-bezier(0.85, 0.85, 0.87, 0.85);
+    animation: line-scale-pulse-out4 0.9s -0.6s infinite cubic-bezier(0.85, 0.85, 0.87, 0.85);
+}
+    
+.l:nth-child(4) {
+    animation-delay: -0.4s !important;
+    width: 3px;
+    height: 16px;
+    border-radius: 1px;
+    margin: 3px 2px 0px 0px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: inline-block;
+    background-color: #fff;
+    -webkit-animation: line-scale-pulse-out2 0.9s -0.6s infinite cubic-bezier(0.85, 0.85, 0.87, 0.85);
+    animation: line-scale-pulse-out2 0.9s -0.6s infinite cubic-bezier(0.85, 0.85, 0.87, 0.85);
+}
+    
+@keyframes line-scale-pulse-out{
+    0%,100%{
+        transform:scaley(.3)
+    }50%{
+        transform:scaley(.5)
+    }
+}
+    
+@keyframes line-scale-pulse-out4{
+    0%,100%{
+        transform:scaley(.7)
+    }50%{
+        transform:scaley(.9)
+    }
+}
+    
+@keyframes line-scale-pulse-out2{
+    0%,100%{
+        transform:scaley(.9)
+    }50%{
+        transform:scaley(1)
+    }
+}
+    
+.m:nth-child(1),.m:nth-child(5) {
+    width: 3px;
+    height: 11px;
+    border-radius: 1px;
+    margin: 3px 2px 3px 0;
+    display: inline-block;
+    background-color: #fff;
+}
+    
+    
+.m:nth-child(2) {
+    width: 3px;
+    border-radius: 1px;
+    display: inline-block;
+    background-color: #fff;
+    height: 16px;
+    margin: 2px 2px 1px 0;
+}
+    
+.m:nth-child(3) {
+    width: 3px;
+    height: 11px;
+    border-radius: 1px;
+    margin: 2px 2px 2px 0;
+    display: inline-block;
+    background-color: #fff;
+}
+    
+.m:nth-child(4) {
+    width: 3px;
+    height: 16px;
+    border-radius: 1px;
+    margin: 3px 2px 0px 0px;
+    display: inline-block;
+    background-color: #fff;
+}
+  
+#copy-buffer{
+    display:none;
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    padding: 4px 8px;
+    background: #44C9C5;
+    color: #fff;
+        }
+</style>
+
+    
+<iframe class="container_page" src="" loading="lazy" marginwidth="0" frameborder="1">
+    Your browser is not support frames!
+</iframe>
+    
+<div class="player_container">
+    <div class="player_container_block1">
+        <div class="player_container_block1_animate">
+            <div class="player_container_block1_animate_b1"></div>
+            <div class="player_container_block1_animate_b2"></div>
+            <div class="player_container_block1_animate_b3"></div>
+            <div class="player_container_block1_animate_b4"></div>
+            <div class="player_container_block1_animate_b5"></div>
+        </div>
+        <div class="player_container_block1_pages my_stream">
+            <svg class="my_stream" viewBox="0 0 24 24" fill="none">
+                <path class="my_stream" d="M19.6585 9.70153L12.6585 3.57653C12.2815 3.24663 11.7185 3.24663 11.3415 3.57652L4.3415 9.70153C4.12448 9.89141 4 10.1657 4 10.4541V19.0003C4 19.5526 4.44772 20.0003 5 20.0003H9C9.55228 20.0003 10 19.5526 10 19.0003V15.0003C10 14.448 10.4477 14.0003 11 14.0003H13C13.5523 14.0003 14 14.448 14 15.0003V19.0003C14 19.5526 14.4477 20.0003 15 20.0003H19C19.5523 20.0003 20 19.5526 20 19.0003V10.4541C20 10.1657 19.8755 9.89141 19.6585 9.70153Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            My stream
+        </div>
+        <div class="player_container_block1_pages news">
+            <svg class="news" viewBox="0 0 24 24" fill="none">
+                <path class="news" d="M12.7309 16.4078H12.1898L12.2325 16.9472C12.2559 17.2437 12.2807 17.5358 12.3052 17.8251C12.3676 18.5618 12.4284 19.28 12.4622 20.0038C12.4686 20.1392 12.4636 20.2853 12.442 20.407C12.435 20.4459 12.4275 20.4763 12.4205 20.4996C12.4133 20.4994 12.4055 20.4991 12.3972 20.4986C12.3365 20.4956 12.267 20.4878 12.1851 20.4774C12.1672 20.4751 12.1481 20.4726 12.1283 20.47C12.0652 20.4617 11.9945 20.4524 11.9311 20.446C11.1043 20.3626 10.5872 19.9886 10.1799 19.4467C9.81201 18.9573 9.54807 18.3544 9.25251 17.6793C9.20007 17.5595 9.14663 17.4375 9.09144 17.3134L8.92539 16.94L8.52642 17.0284C8.33617 17.0706 8.16299 17.1132 7.99934 17.1535C7.67413 17.2336 7.38659 17.3044 7.07765 17.3436C6.59203 17.4053 6.17035 17.3808 5.79907 17.2576C5.43304 17.1362 5.08716 16.9093 4.76288 16.5199C4.17425 15.8129 3.76376 14.7737 3.59073 13.734C3.41526 12.6797 3.50199 11.7389 3.78354 11.2061C3.91008 10.9667 4.14698 10.7375 4.34223 10.6547L4.15149 10.2049L4.34223 10.6547C7.85097 9.16683 11.0253 7.14527 13.4334 3.9838C13.4539 3.95692 13.4953 3.91916 13.6079 3.84495C13.6284 3.83142 13.6522 3.81611 13.6786 3.79921C13.7529 3.75148 13.8471 3.69104 13.9419 3.62213C15.4588 3.20252 16.8898 3.87859 18.0919 5.58495C19.5353 7.63376 20.3378 9.92723 20.4931 12.3852C20.5598 13.4414 20.1405 14.6083 19.6999 15.7776C19.6172 15.9971 19.3944 16.187 18.9925 16.3138C18.5974 16.4385 18.1131 16.4721 17.6801 16.4407C16.5403 16.3581 15.3815 16.3754 14.2119 16.393C13.7199 16.4004 13.2261 16.4078 12.7309 16.4078ZM15.0657 15.8051L16.0203 15.694L15.3813 14.976C13.3981 12.7478 12.715 10.0712 12.3879 7.14409L12.2942 6.3058L11.6037 6.79035L11.602 6.79156C10.8269 7.33555 10.0653 7.86999 9.20222 8.50693C8.82634 8.72232 8.45263 8.93826 8.07983 9.15366C7.15729 9.68671 6.24035 10.2165 5.3099 10.7268C5.27001 10.7487 5.22732 10.7717 5.18252 10.7958C4.90947 10.9425 4.55842 11.1312 4.29033 11.3746C3.94396 11.689 3.68426 12.1375 3.77696 12.7533C3.92834 13.7588 4.26459 14.7916 4.76207 15.6818C4.97807 16.0683 5.2756 16.4505 5.72208 16.6794C6.18015 16.9142 6.72228 16.9511 7.35056 16.7843C8.46764 16.4877 9.6106 16.3844 10.8011 16.2769C11.3169 16.2303 11.8415 16.1829 12.3769 16.1187C12.9566 16.0491 13.536 15.9821 14.1557 15.9105C14.4486 15.8767 14.7505 15.8418 15.0657 15.8051ZM13.3016 4.95974C13.1016 5.40624 13.0407 5.93837 13.0249 6.3867L13.0205 6.40325L13.0198 6.40624C13.0121 6.43537 12.9931 6.50735 12.9903 6.57721C12.9897 6.59122 12.9891 6.61881 12.9928 6.65306L12.9929 6.65439C12.9951 6.67468 13.0051 6.76923 13.0677 6.86829C13.105 6.92713 13.1776 7.01361 13.3019 7.06427C13.3225 7.07266 13.3429 7.07944 13.3632 7.08479C13.9968 7.68215 14.5705 8.22316 15.2239 8.84107C16.1784 10.6335 16.7061 12.2648 15.6875 14.0171L15.5048 14.3312L15.7473 14.6019C16.1539 15.0559 16.5433 15.4159 16.9183 15.6638C17.2908 15.9101 17.6857 16.0698 18.0912 16.0611C18.9649 16.0424 19.4924 15.2912 19.8283 14.3742C19.9305 14.0953 19.9488 13.779 19.9616 13.56C19.9637 13.5238 19.9656 13.4903 19.9677 13.4601C20.1937 10.2708 19.0923 7.52346 17.1403 5.18896C16.8499 4.84159 16.4348 4.53845 16.0032 4.32728C15.576 4.11827 15.0772 3.97245 14.6132 4.00195C13.9299 4.04539 13.5197 4.47318 13.3016 4.95974ZM13.022 6.43464C13.022 6.43459 13.0221 6.43413 13.0223 6.43327L13.022 6.43464ZM14.4893 12.9122L14.7777 13.5188L15.276 13.0685C15.2846 13.0608 15.3027 13.0464 15.3412 13.0187C15.3481 13.0138 15.3562 13.008 15.3652 13.0016C15.3956 12.9799 15.4359 12.9512 15.4704 12.9248C15.5146 12.891 15.5823 12.8365 15.6415 12.7666C15.693 12.7056 15.8044 12.5561 15.7954 12.3413C15.7292 10.7685 15.2745 9.26504 13.8411 8.21574L12.8656 7.50162L13.0518 8.69617C13.1639 9.41611 13.3553 10.0998 13.5868 10.7582C13.8296 11.4487 14.1128 12.1206 14.4893 12.9122ZM10.9339 16.7353L10.8742 16.7254L10.8137 16.7301L10.2284 16.7759L9.58664 16.826L9.79399 17.4354L9.79717 17.4447C9.93355 17.8455 10.04 18.1584 10.1308 18.3989C10.2207 18.6367 10.3076 18.838 10.4121 18.999C10.5278 19.1773 10.6652 19.3067 10.8437 19.4004C10.9866 19.4755 11.1482 19.5213 11.2823 19.5593C11.2904 19.5615 11.2983 19.5638 11.3062 19.566L11.983 19.7584L11.942 19.056C11.935 18.9353 11.9294 18.8068 11.9236 18.6731C11.9074 18.2992 11.8894 17.8849 11.8329 17.4882C11.7931 17.2093 11.6034 17.0296 11.4568 16.9327C11.3003 16.8292 11.1152 16.7651 10.9339 16.7353Z" fill="#0C1827"/>
+            </svg>
+            News
+        </div>
+        <div class="player_container_block1_pages podcasts">
+            <svg class="podcasts" viewBox="0 0 24 24" fill="none">
+                <path class="podcasts" d="M12.9759 13.443C12.9326 13.6681 12.8889 13.895 12.8889 14.1242V19.1111C12.8889 19.602 12.4909 20 12 20V20C11.5091 20 11.1111 19.602 11.1111 19.1111V14.132C11.1111 13.9039 11.068 13.6782 11.0248 13.4542C10.9251 12.9371 10.8966 12 12 12C13.1009 12 13.075 12.9279 12.9759 13.443ZM12 7.12195C13.3135 7.12195 14.5731 7.65644 15.5019 8.60785C16.4306 9.55925 16.9524 10.8496 16.9524 12.1951C16.9524 12.8217 16.8424 13.4226 16.6405 13.977C16.4678 14.4515 15.8727 14.5392 15.4995 14.1991V14.1991C15.2327 13.956 15.1712 13.5665 15.2763 13.2212C15.3754 12.8958 15.4286 12.55 15.4286 12.1951C15.4286 10.2439 13.9048 8.68293 12 8.68293C10.0952 8.68293 8.57143 10.2439 8.57143 12.1951C8.57143 12.55 8.62463 12.8958 8.72367 13.2212C8.82877 13.5665 8.76725 13.956 8.50047 14.1991V14.1991C8.12727 14.5392 7.5322 14.4515 7.35946 13.977C7.15762 13.4226 7.04762 12.8217 7.04762 12.1951C7.04762 10.8496 7.56939 9.55925 8.49814 8.60785C9.42689 7.65644 10.6865 7.12195 12 7.12195ZM12 4C14.1217 4 16.1566 4.86341 17.6569 6.4003C19.1571 7.93718 20 10.0216 20 12.1951C20 13.6527 19.6269 15.0212 18.9769 16.2064C18.75 16.6201 18.1978 16.6791 17.8508 16.3592V16.3592C17.5701 16.1004 17.523 15.6782 17.701 15.3404C18.1948 14.4031 18.4762 13.3311 18.4762 12.1951C18.4762 10.4356 17.7939 8.74822 16.5794 7.50407C15.3648 6.25993 13.7176 5.56098 12 5.56098C10.2824 5.56098 8.63516 6.25993 7.42064 7.50407C6.20612 8.74822 5.52381 10.4356 5.52381 12.1951C5.52381 13.3311 5.8052 14.4031 6.29904 15.3404C6.47705 15.6782 6.42995 16.1004 6.14919 16.3592V16.3592C5.80225 16.6791 5.25002 16.6201 5.02311 16.2064C4.37313 15.0212 4 13.6527 4 12.1951C4 10.0216 4.84285 7.93718 6.34315 6.4003C7.84344 4.86341 9.87827 4 12 4ZM12 10.2439C12.5052 10.2439 12.9897 10.4495 13.3469 10.8154C13.7041 11.1813 13.9048 11.6776 13.9048 12.1951C13.9048 12.7126 13.7041 13.2089 13.3469 13.5748C12.9897 13.9408 12.5052 14.1463 12 14.1463C11.4948 14.1463 11.0103 13.9408 10.6531 13.5748C10.2959 13.2089 10.0952 12.7126 10.0952 12.1951C10.0952 11.6776 10.2959 11.1813 10.6531 10.8154C11.0103 10.4495 11.4948 10.2439 12 10.2439Z" />
+            </svg>
+            Podcasts
+        </div>
+        <div class="player_container_block1_pages search">
+            <svg class="search" viewBox="0 0 24 24" fill="none">
+                <path class="search" d="M20 20L15.0241 15.2383M16.9123 10.5853C16.9123 12.3318 16.2321 14.0068 15.0213 15.2417C13.8106 16.4767 12.1684 17.1705 10.4561 17.1705C8.74387 17.1705 7.10172 16.4767 5.89096 15.2417C4.6802 14.0068 4 12.3318 4 10.5853C4 8.83874 4.6802 7.16376 5.89096 5.92878C7.10172 4.6938 8.74387 4 10.4561 4C12.1684 4 13.8106 4.6938 15.0213 5.92878C16.2321 7.16376 16.9123 8.83874 16.9123 10.5853Z" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Search
+        </div>
+        <div class="player_container_block1_pages">
+            <svg class="settings"  viewBox="0 0 55 55">
+                <path class="settings" d="M 22.205078 2 A 1.0001 1.0001 0 0 0 21.21875 2.8378906 L 20.246094 8.7929688 C 19.076509 9.1331971 17.961243 9.5922728 16.910156 10.164062 L 11.996094 6.6542969 A 1.0001 1.0001 0 0 0 10.708984 6.7597656 L 6.8183594 10.646484 A 1.0001 1.0001 0 0 0 6.7070312 11.927734 L 10.164062 16.873047 C 9.583454 17.930271 9.1142098 19.051824 8.765625 20.232422 L 2.8359375 21.21875 A 1.0001 1.0001 0 0 0 2.0019531 22.205078 L 2.0019531 27.705078 A 1.0001 1.0001 0 0 0 2.8261719 28.691406 L 8.7597656 29.742188 C 9.1064607 30.920739 9.5727226 32.043065 10.154297 33.101562 L 6.6542969 37.998047 A 1.0001 1.0001 0 0 0 6.7597656 39.285156 L 10.648438 43.175781 A 1.0001 1.0001 0 0 0 11.927734 43.289062 L 16.882812 39.820312 C 17.936999 40.39548 19.054994 40.857928 20.228516 41.201172 L 21.21875 47.164062 A 1.0001 1.0001 0 0 0 22.205078 48 L 27.705078 48 A 1.0001 1.0001 0 0 0 28.691406 47.173828 L 29.751953 41.1875 C 30.920633 40.838997 32.033372 40.369697 33.082031 39.791016 L 38.070312 43.291016 A 1.0001 1.0001 0 0 0 39.351562 43.179688 L 43.240234 39.287109 A 1.0001 1.0001 0 0 0 43.34375 37.996094 L 39.787109 33.058594 C 40.355783 32.014958 40.813915 30.908875 41.154297 29.748047 L 47.171875 28.693359 A 1.0001 1.0001 0 0 0 47.998047 27.707031 L 47.998047 22.207031 A 1.0001 1.0001 0 0 0 47.160156 21.220703 L 41.152344 20.238281 C 40.80968 19.078827 40.350281 17.974723 39.78125 16.931641 L 43.289062 11.933594 A 1.0001 1.0001 0 0 0 43.177734 10.652344 L 39.287109 6.7636719 A 1.0001 1.0001 0 0 0 37.996094 6.6601562 L 33.072266 10.201172 C 32.023186 9.6248101 30.909713 9.1579916 29.738281 8.8125 L 28.691406 2.828125 A 1.0001 1.0001 0 0 0 27.705078 2 L 22.205078 2 z M 23.056641 4 L 26.865234 4 L 27.861328 9.6855469 A 1.0001 1.0001 0 0 0 28.603516 10.484375 C 30.066026 10.848832 31.439607 11.426549 32.693359 12.185547 A 1.0001 1.0001 0 0 0 33.794922 12.142578 L 38.474609 8.7792969 L 41.167969 11.472656 L 37.835938 16.220703 A 1.0001 1.0001 0 0 0 37.796875 17.310547 C 38.548366 18.561471 39.118333 19.926379 39.482422 21.380859 A 1.0001 1.0001 0 0 0 40.291016 22.125 L 45.998047 23.058594 L 45.998047 26.867188 L 40.279297 27.871094 A 1.0001 1.0001 0 0 0 39.482422 28.617188 C 39.122545 30.069817 38.552234 31.434687 37.800781 32.685547 A 1.0001 1.0001 0 0 0 37.845703 33.785156 L 41.224609 38.474609 L 38.53125 41.169922 L 33.791016 37.84375 A 1.0001 1.0001 0 0 0 32.697266 37.808594 C 31.44975 38.567585 30.074755 39.148028 28.617188 39.517578 A 1.0001 1.0001 0 0 0 27.876953 40.3125 L 26.867188 46 L 23.052734 46 L 22.111328 40.337891 A 1.0001 1.0001 0 0 0 21.365234 39.53125 C 19.90185 39.170557 18.522094 38.59371 17.259766 37.835938 A 1.0001 1.0001 0 0 0 16.171875 37.875 L 11.46875 41.169922 L 8.7734375 38.470703 L 12.097656 33.824219 A 1.0001 1.0001 0 0 0 12.138672 32.724609 C 11.372652 31.458855 10.793319 30.079213 10.427734 28.609375 A 1.0001 1.0001 0 0 0 9.6328125 27.867188 L 4.0019531 26.867188 L 4.0019531 23.052734 L 9.6289062 22.117188 A 1.0001 1.0001 0 0 0 10.435547 21.373047 C 10.804273 19.898143 11.383325 18.518729 12.146484 17.255859 A 1.0001 1.0001 0 0 0 12.111328 16.164062 L 8.8261719 11.46875 L 11.523438 8.7734375 L 16.185547 12.105469 A 1.0001 1.0001 0 0 0 17.28125 12.148438 C 18.536908 11.394293 19.919867 10.822081 21.384766 10.462891 A 1.0001 1.0001 0 0 0 22.132812 9.6523438 L 23.056641 4 z M 25 17 C 20.593567 17 17 20.593567 17 25 C 17 29.406433 20.593567 33 25 33 C 29.406433 33 33 29.406433 33 25 C 33 20.593567 29.406433 17 25 17 z M 25 19 C 28.325553 19 31 21.674447 31 25 C 31 28.325553 28.325553 31 25 31 C 21.674447 31 19 28.325553 19 25 C 19 21.674447 21.674447 19 25 19 z"/>
+                <div class="settings_div">
+                     <div>
+                        <svg viewBox="0 0 19 20" fill="none">
+                            <path d="M6.0415 9.79134L2.87484 6.62467L6.0415 3.45801 M13.1667 14.5417C15.3528 14.5417 17.125 12.7695 17.125 10.5833C17.125 8.39721 15.3528 6.625 13.1667 6.625H2.875" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <text id="last_elem" x="0" y="20" font-size="56%" fill="#969696">5 c</text>
+                        </svg>
+                         
+                        <select onchange="document.getElementById('last_elem').innerHTML=this.value.slice(0, -2);document.getElementsByClassName('prev_remote')[2].innerHTML=this.value.slice(0, -2)">
+                            <option>5 cек</option>
+                            <option>10 cек</option>
+                            <option>30 cек</option>
+                            <option>1 мин</option>
+                            <option>5 мин</option>
+                        </select>
+                     </div>
+                     <div>
+                        <svg viewBox="0 0 19 20" fill="none">
+                            <path d="M13.459 9.79134L16.6257 6.62467L13.459 3.45801 M6.33333 14.5417C4.14721 14.5417 2.375 12.7695 2.375 10.5833C2.375 8.39721 4.14721 6.625 6.33333 6.625H16.625" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <text id="previous_elem" x="7" y="20" font-size="56%" fill="#969696">5 c</text>
+                        </svg>
+                         
+                        <select onchange="document.getElementById('previous_elem').innerHTML=this.value.slice(0, -2);document.getElementsByClassName('next_remote')[2].innerHTML=this.value.slice(0, -2)">
+                            <option>5 cек</option>
+                            <option>10 cек</option>
+                            <option>30 cек</option>
+                            <option>1 мин</option>
+                            <option>5 мин</option>
+                        </select>
+                     </div>
+                </div>
+            </svg>
+            
+            <svg class="light_theme" viewBox="8 8 13 13" fill="none">
+                <path class="light_theme" d="M15.0002 17.9166C16.611 17.9166 17.9168 16.6107 17.9168 14.9999C17.9168 13.3891 16.611 12.0833 15.0002 12.0833C13.3893 12.0833 12.0835 13.3891 12.0835 14.9999C12.0835 16.6107 13.3893 17.9166 15.0002 17.9166Z M15 9.16675V10.3334 M15 19.6667V20.8334 M10.9165 10.9167L11.4998 11.5001 M18.5 18.5L19.0833 19.0833 M9.1665 15H10.3332 M19.6665 15H20.8332 M10.9165 19.0833L11.4998 18.5 M18.5 11.5001L19.0833 10.9167" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+            <svg class="dark_theme" viewBox="8 8 15 15" fill="none">
+                <path class="dark_theme" d="M20.2502 15.4608C20.1584 16.4538 19.7858 17.4001 19.1758 18.189C18.5659 18.9778 17.7439 19.5767 16.806 19.9155C15.8681 20.2542 14.8532 20.3189 13.8799 20.1019C12.9066 19.8849 12.0153 19.3952 11.3102 18.69C10.605 17.9849 10.1153 17.0936 9.8983 16.1203C9.68128 15.147 9.74594 14.132 10.0847 13.1942C10.4235 12.2563 11.0223 11.4343 11.8112 10.8244C12.6001 10.2144 13.5464 9.84176 14.5394 9.75C13.958 10.5365 13.6783 11.5055 13.751 12.4808C13.8237 13.4561 14.2441 14.373 14.9357 15.0645C15.6272 15.7561 16.544 16.1765 17.5194 16.2492C18.4947 16.3219 19.4637 16.0422 20.2502 15.4608Z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+    <div class="player_container_block2">
+        <div class="player_container_block2_b1">
+            <svg class="playlist_menu" width="11%" viewBox="0 0 20 20" fill="none" stroke="#44C9C5">
+                <path class="playlist_menu" d="M2.5 10.8335L17.5 10.8335 M8.3335 5.8335L17.5002 5.8335 M2.5 15.8335L17.5 15.8335 M4.08938 5.83317L2.6665 6.82918L2.6665 4.83716L4.08938 5.83317Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="player_container_block2_b1_menu">
+                <div class="player_container_block2_b1_menu_bl1">
+                    <div class="player_container_block2_b1_menu_bl1_container1">
+                        <svg height="100%" viewBox="0 0 20 20" fill="none" stroke="#44C9C5">
+                            <path d="M2.5 10.8335L17.5 10.8335" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.3335 5.8335L17.5002 5.8335" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.5 15.8335L17.5 15.8335" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.08938 5.83317L2.6665 6.82918L2.6665 4.83716L4.08938 5.83317Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>На очереди</p>
+                    </div>
+                    <div class="player_container_block2_b1_menu_bl1_container2">
+                        <div id="news_block_container">
+                           <svg id="news_block" viewBox="0 0 24 24">
+                                <path d="M12.7309 16.4078H12.1898L12.2325 16.9472C12.2559 17.2437 12.2807 17.5358 12.3052 17.8251C12.3676 18.5618 12.4284 19.28 12.4622 20.0038C12.4686 20.1392 12.4636 20.2853 12.442 20.407C12.435 20.4459 12.4275 20.4763 12.4205 20.4996C12.4133 20.4994 12.4055 20.4991 12.3972 20.4986C12.3365 20.4956 12.267 20.4878 12.1851 20.4774C12.1672 20.4751 12.1481 20.4726 12.1283 20.47C12.0652 20.4617 11.9945 20.4524 11.9311 20.446C11.1043 20.3626 10.5872 19.9886 10.1799 19.4467C9.81201 18.9573 9.54807 18.3544 9.25251 17.6793C9.20007 17.5595 9.14663 17.4375 9.09144 17.3134L8.92539 16.94L8.52642 17.0284C8.33617 17.0706 8.16299 17.1132 7.99934 17.1535C7.67413 17.2336 7.38659 17.3044 7.07765 17.3436C6.59203 17.4053 6.17035 17.3808 5.79907 17.2576C5.43304 17.1362 5.08716 16.9093 4.76288 16.5199C4.17425 15.8129 3.76376 14.7737 3.59073 13.734C3.41526 12.6797 3.50199 11.7389 3.78354 11.2061C3.91008 10.9667 4.14698 10.7375 4.34223 10.6547L4.15149 10.2049L4.34223 10.6547C7.85097 9.16683 11.0253 7.14527 13.4334 3.9838C13.4539 3.95692 13.4953 3.91916 13.6079 3.84495C13.6284 3.83142 13.6522 3.81611 13.6786 3.79921C13.7529 3.75148 13.8471 3.69104 13.9419 3.62213C15.4588 3.20252 16.8898 3.87859 18.0919 5.58495C19.5353 7.63376 20.3378 9.92723 20.4931 12.3852C20.5598 13.4414 20.1405 14.6083 19.6999 15.7776C19.6172 15.9971 19.3944 16.187 18.9925 16.3138C18.5974 16.4385 18.1131 16.4721 17.6801 16.4407C16.5403 16.3581 15.3815 16.3754 14.2119 16.393C13.7199 16.4004 13.2261 16.4078 12.7309 16.4078ZM15.0657 15.8051L16.0203 15.694L15.3813 14.976C13.3981 12.7478 12.715 10.0712 12.3879 7.14409L12.2942 6.3058L11.6037 6.79035L11.602 6.79156C10.8269 7.33555 10.0653 7.86999 9.20222 8.50693C8.82634 8.72232 8.45263 8.93826 8.07983 9.15366C7.15729 9.68671 6.24035 10.2165 5.3099 10.7268C5.27001 10.7487 5.22732 10.7717 5.18252 10.7958C4.90947 10.9425 4.55842 11.1312 4.29033 11.3746C3.94396 11.689 3.68426 12.1375 3.77696 12.7533C3.92834 13.7588 4.26459 14.7916 4.76207 15.6818C4.97807 16.0683 5.2756 16.4505 5.72208 16.6794C6.18015 16.9142 6.72228 16.9511 7.35056 16.7843C8.46764 16.4877 9.6106 16.3844 10.8011 16.2769C11.3169 16.2303 11.8415 16.1829 12.3769 16.1187C12.9566 16.0491 13.536 15.9821 14.1557 15.9105C14.4486 15.8767 14.7505 15.8418 15.0657 15.8051ZM13.3016 4.95974C13.1016 5.40624 13.0407 5.93837 13.0249 6.3867L13.0205 6.40325L13.0198 6.40624C13.0121 6.43537 12.9931 6.50735 12.9903 6.57721C12.9897 6.59122 12.9891 6.61881 12.9928 6.65306L12.9929 6.65439C12.9951 6.67468 13.0051 6.76923 13.0677 6.86829C13.105 6.92713 13.1776 7.01361 13.3019 7.06427C13.3225 7.07266 13.3429 7.07944 13.3632 7.08479C13.9968 7.68215 14.5705 8.22316 15.2239 8.84107C16.1784 10.6335 16.7061 12.2648 15.6875 14.0171L15.5048 14.3312L15.7473 14.6019C16.1539 15.0559 16.5433 15.4159 16.9183 15.6638C17.2908 15.9101 17.6857 16.0698 18.0912 16.0611C18.9649 16.0424 19.4924 15.2912 19.8283 14.3742C19.9305 14.0953 19.9488 13.779 19.9616 13.56C19.9637 13.5238 19.9656 13.4903 19.9677 13.4601C20.1937 10.2708 19.0923 7.52346 17.1403 5.18896C16.8499 4.84159 16.4348 4.53845 16.0032 4.32728C15.576 4.11827 15.0772 3.97245 14.6132 4.00195C13.9299 4.04539 13.5197 4.47318 13.3016 4.95974ZM13.022 6.43464C13.022 6.43459 13.0221 6.43413 13.0223 6.43327L13.022 6.43464ZM14.4893 12.9122L14.7777 13.5188L15.276 13.0685C15.2846 13.0608 15.3027 13.0464 15.3412 13.0187C15.3481 13.0138 15.3562 13.008 15.3652 13.0016C15.3956 12.9799 15.4359 12.9512 15.4704 12.9248C15.5146 12.891 15.5823 12.8365 15.6415 12.7666C15.693 12.7056 15.8044 12.5561 15.7954 12.3413C15.7292 10.7685 15.2745 9.26504 13.8411 8.21574L12.8656 7.50162L13.0518 8.69617C13.1639 9.41611 13.3553 10.0998 13.5868 10.7582C13.8296 11.4487 14.1128 12.1206 14.4893 12.9122ZM10.9339 16.7353L10.8742 16.7254L10.8137 16.7301L10.2284 16.7759L9.58664 16.826L9.79399 17.4354L9.79717 17.4447C9.93355 17.8455 10.04 18.1584 10.1308 18.3989C10.2207 18.6367 10.3076 18.838 10.4121 18.999C10.5278 19.1773 10.6652 19.3067 10.8437 19.4004C10.9866 19.4755 11.1482 19.5213 11.2823 19.5593C11.2904 19.5615 11.2983 19.5638 11.3062 19.566L11.983 19.7584L11.942 19.056C11.935 18.9353 11.9294 18.8068 11.9236 18.6731C11.9074 18.2992 11.8894 17.8849 11.8329 17.4882C11.7931 17.2093 11.6034 17.0296 11.4568 16.9327C11.3003 16.8292 11.1152 16.7651 10.9339 16.7353Z" stroke="#44C9C5"/>
+                            </svg>
+                        </div>
+                        
+                        <div id="podcasts_block_container">
+                            <svg id="podcasts_block" viewBox="0 0 24 24" fill="#44C9C5">
+                                <path d="M12.9759 13.443C12.9326 13.6681 12.8889 13.895 12.8889 14.1242V19.1111C12.8889 19.602 12.4909 20 12 20V20C11.5091 20 11.1111 19.602 11.1111 19.1111V14.132C11.1111 13.9039 11.068 13.6782 11.0248 13.4542C10.9251 12.9371 10.8966 12 12 12C13.1009 12 13.075 12.9279 12.9759 13.443ZM12 7.12195C13.3135 7.12195 14.5731 7.65644 15.5019 8.60785C16.4306 9.55925 16.9524 10.8496 16.9524 12.1951C16.9524 12.8217 16.8424 13.4226 16.6405 13.977C16.4678 14.4515 15.8727 14.5392 15.4995 14.1991V14.1991C15.2327 13.956 15.1712 13.5665 15.2763 13.2212C15.3754 12.8958 15.4286 12.55 15.4286 12.1951C15.4286 10.2439 13.9048 8.68293 12 8.68293C10.0952 8.68293 8.57143 10.2439 8.57143 12.1951C8.57143 12.55 8.62463 12.8958 8.72367 13.2212C8.82877 13.5665 8.76725 13.956 8.50047 14.1991V14.1991C8.12727 14.5392 7.5322 14.4515 7.35946 13.977C7.15762 13.4226 7.04762 12.8217 7.04762 12.1951C7.04762 10.8496 7.56939 9.55925 8.49814 8.60785C9.42689 7.65644 10.6865 7.12195 12 7.12195ZM12 4C14.1217 4 16.1566 4.86341 17.6569 6.4003C19.1571 7.93718 20 10.0216 20 12.1951C20 13.6527 19.6269 15.0212 18.9769 16.2064C18.75 16.6201 18.1978 16.6791 17.8508 16.3592V16.3592C17.5701 16.1004 17.523 15.6782 17.701 15.3404C18.1948 14.4031 18.4762 13.3311 18.4762 12.1951C18.4762 10.4356 17.7939 8.74822 16.5794 7.50407C15.3648 6.25993 13.7176 5.56098 12 5.56098C10.2824 5.56098 8.63516 6.25993 7.42064 7.50407C6.20612 8.74822 5.52381 10.4356 5.52381 12.1951C5.52381 13.3311 5.8052 14.4031 6.29904 15.3404C6.47705 15.6782 6.42995 16.1004 6.14919 16.3592V16.3592C5.80225 16.6791 5.25002 16.6201 5.02311 16.2064C4.37313 15.0212 4 13.6527 4 12.1951C4 10.0216 4.84285 7.93718 6.34315 6.4003C7.84344 4.86341 9.87827 4 12 4ZM12 10.2439C12.5052 10.2439 12.9897 10.4495 13.3469 10.8154C13.7041 11.1813 13.9048 11.6776 13.9048 12.1951C13.9048 12.7126 13.7041 13.2089 13.3469 13.5748C12.9897 13.9408 12.5052 14.1463 12 14.1463C11.4948 14.1463 11.0103 13.9408 10.6531 13.5748C10.2959 13.2089 10.0952 12.7126 10.0952 12.1951C10.0952 11.6776 10.2959 11.1813 10.6531 10.8154C11.0103 10.4495 11.4948 10.2439 12 10.2439Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="player_container_block2_b1_menu_bl2_news"></div>
+                <div class="player_container_block2_b1_menu_bl2_podcasts"></div>
+            </div>
+        </div>
+        
+        <div class="player_container_block2_b2">
+            <img id="picture">
+        </div>
+        
+        <div class="player_container_block2_b5">
+            <marquee id="name" scrolldelay="10" scrollamount="4"></marquee>
+        </div>
+        <div class="player_container_block2_b6">
+            <p id="author">Empty (no sounds)</p>
+        </div>
+        
+        <div class="player_container_block2_b3">
+            <input id="range" type="range" min="0" max="0" value="0" step="1" oninput="document.getElementById('audio').currentTime = this.value / 1000;">
+            <audio id="audio" src></audio>
+        </div>
+        <div class="player_container_block2_b4">
+            <p id="plstart">00:00:00</p>
+            <p id="plend">00:00:00</p>
+        </div>
+        
+        <div class="player_container_block2_b7">
+            <div class="player_container_block2_b7_podcast">
+                <div class="player_container_block2_b7_podcast_b1">
+                     <svg class="prev_remote" viewBox="0 0 19 20" fill="none">
+                        <path class="prev_remote" d="M6.0415 9.79134L2.87484 6.62467L6.0415 3.45801 M13.1667 14.5417C15.3528 14.5417 17.125 12.7695 17.125 10.5833C17.125 8.39721 15.3528 6.625 13.1667 6.625H2.875" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <text class="prev_remote" x="0" y="20" font-size="56%" fill="#969696">5 c</text>
+                    </svg>
+
+                    <svg id="prev" viewBox="0 0 19 18" fill="none">
+                        <path id="prev1" d="M3.95801 3.75L3.95801 14.25 M7.8977 9.58567C7.50155 9.28543 7.50155 8.71461 7.8977 8.41437L13.7554 3.97484C14.2738 3.58198 15.0416 3.93161 15.0416 4.56049V13.4396C15.0416 14.0684 14.2738 14.4181 13.7554 14.0252L7.8977 9.58567Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <svg id="play_stop" viewBox="0 0 32 32" fill="none">
+                        <path id="play_stop1" d="M23.6693 17.1095C24.4609 16.5818 24.4609 15.4185 23.6693 14.8907L11.4063 6.71543C10.5202 6.12472 9.33337 6.75991 9.33337 7.82483V24.1755C9.33337 25.2404 10.5202 25.8756 11.4063 25.2849L23.6693 17.1095Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <svg id="next" viewBox="0 0 19 18" fill="none">
+                        <path id="next1" d="M15.042 3.75L15.042 14.25 M11.1019 9.58567C11.4981 9.28543 11.4981 8.71461 11.1019 8.41437L5.24423 3.97484C4.72587 3.58198 3.95801 3.93161 3.95801 4.56049V13.4396C3.95801 14.0684 4.72587 14.4181 5.24422 14.0252L11.1019 9.58567Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <svg class="next_remote" viewBox="0 0 19 20" fill="none">
+                        <path class="next_remote" d="M13.459 9.79134L16.6257 6.62467L13.459 3.45801 M6.33333 14.5417C4.14721 14.5417 2.375 12.7695 2.375 10.5833C2.375 8.39721 4.14721 6.625 6.33333 6.625H16.625" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <text class="next_remote" x="7" y="20" font-size="56%" fill="#969696">5 c</text>
+                    </svg>
+                </div>
+                <div class="player_container_block2_b7_podcast_b2">
+                    <div id="speed_list">
+                        <p id="speed_num">1X</p>
+                        <div id="speed_block">
+                           <p class="speed">0.5X</p>
+                           <p class="speed">1X</p>
+                           <p class="speed">1.5X</p>
+                           <p class="speed">2.0X</p>
+                        </div>
+                    </div>
+                    
+                    <svg data-pl class="share" viewBox="0 0 21 21" fill="none">
+                        <path data-pl class="share" d="M13 4.6665L10.5 2.1665M10.5 2.1665L8 4.6665M10.5 2.1665L10.5 12.1665 M5.50004 7.1665H3.83337V15.1665C3.83337 16.2711 4.7288 17.1665 5.83337 17.1665H15.1667C16.2713 17.1665 17.1667 16.2711 17.1667 15.1665V7.1665H15.5" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+                    <svg data-pl class="like" viewBox="0 0 20 21" fill="none">
+                        <path data-pl class="like" d="M16.3434 5.01226C15.9768 4.63856 15.5417 4.34211 15.0627 4.13985C14.5837 3.9376 14.0704 3.8335 13.5519 3.8335C13.0335 3.8335 12.5201 3.9376 12.0411 4.13985C11.5621 4.34211 11.127 4.63856 10.7605 5.01226L9.99981 5.78746L9.23916 5.01226C8.49882 4.25776 7.4947 3.83389 6.44771 3.83389C5.40071 3.83389 4.39659 4.25776 3.65626 5.01226C2.91592 5.76676 2.5 6.79008 2.5 7.8571C2.5 8.92412 2.91592 9.94744 3.65626 10.7019L4.41691 11.4771L9.99981 17.1668L15.5827 11.4771L16.3434 10.7019C16.71 10.3284 17.0009 9.88492 17.1994 9.39679C17.3979 8.90867 17.5 8.38547 17.5 7.8571C17.5 7.32873 17.3979 6.80554 17.1994 6.31741C17.0009 5.82928 16.71 5.38579 16.3434 5.01226V5.01226Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+                    <svg class="repeat" viewBox="0 0 21 21" fill="none">
+                        <path class="repeat" d="M17.1666 8L17.1666 3.83333L15.5 4.66667 M12.1666 6.3335H7.16663 M6.33337 17.1665L3.83337 14.6665M3.83337 14.6665L6.33337 12.1665M3.83337 14.6665L13.8334 14.6665 M3.83329 9.66683C3.83329 7.82588 5.32568 6.3335 7.16663 6.3335 M17.1667 11.3332C17.1667 13.1741 15.6743 14.6665 13.8334 14.6665" stroke="#969696" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    
+                    <svg class="random" viewBox="0 0 20 21" fill="none">
+                        <path class="random" d="M3 14.5H4.63702C6.0351 14.5 7.33173 13.77 8.05689 12.5747L10.3876 8.73297C11.1127 7.53765 12.4093 6.80769 13.8074 6.80769H17M17 6.80769L14.6667 4.5M17 6.80769L14.6667 9.11538 M3 7.5H4.76128C6.09146 7.5 7.33461 8.16123 8.0781 9.26422L10.3663 12.6589C11.1098 13.7618 12.353 14.4231 13.6832 14.4231H17M17 14.4231L14.6667 16.5M17 14.4231L14.6667 12.3462" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="hidden"></div>
+<p id="hidden-play_stop"></p>
+<p id="hidden_next"></p>
+    
+<div id="copy-buffer">Скопированно в буфер обмена</div>
+<script>     
+var dataNEWS;
+var dataPODCASTS;    
+if (localStorage.player){
+    dataNEWS=localStorage.news || '[]';
+    dataPODCASTS=localStorage.podcasts || '{"item":[]}';
+    dataPODCASTS=JSON.parse(dataPODCASTS);
+    dataNEWS=JSON.parse(dataNEWS);
+ 
+    
+    if(dataPODCASTS.item.length == 0){
+        setTimeout(()=>{
+            document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].innerHTML = '<p style="margin:auto">Your podcasts queue is empty</p>';
+        },50);
+    }else{
+       var podcasts_container='';
+       
+       for(var q=0;q<dataPODCASTS.item.length;q++){
+            podcasts_container+='<div data-id="'+q+'" class="some"><div class="some1 p"><img class="some1_img" src="'+dataPODCASTS.audio_img+'"></div><div class="some2"><p class="some2_text">'+dataPODCASTS.item[q].audio_name+'</p><div class="some2_container"><div><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="6" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 6.6665V10.8332H12.5" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>'+dataPODCASTS.item[q].duration+' мин</p></div><div><svg viewBox="0 0 20 20" fill="none" ><path d="M4.1665 14.1665V10.1665C4.1665 8.57521 4.78109 7.04908 5.87505 5.92386C6.96901 4.79865 8.45274 4.1665 9.99984 4.1665C11.5469 4.1665 13.0307 4.79865 14.1246 5.92386C15.2186 7.04908 15.8332 8.57521 15.8332 10.1665V14.1665 M15.8332 14.6427C15.8332 14.9584 15.6966 15.2612 15.4535 15.4845C15.2104 15.7077 14.8807 15.8332 14.5369 15.8332H13.8887C13.5449 15.8332 13.2152 15.7077 12.9721 15.4845C12.729 15.2612 12.5924 14.9584 12.5924 14.6427V12.857C12.5924 12.5412 12.729 12.2384 12.9721 12.0152C13.2152 11.7919 13.5449 11.6665 13.8887 11.6665H15.8332V14.6427ZM4.1665 14.6427C4.1665 14.9584 4.30308 15.2612 4.54618 15.4845C4.78928 15.7077 5.119 15.8332 5.4628 15.8332H6.11095C6.45475 15.8332 6.78447 15.7077 7.02757 15.4845C7.27067 15.2612 7.40724 14.9584 7.40724 14.6427V12.857C7.40724 12.5412 7.27067 12.2384 7.02757 12.0152C6.78447 11.7919 6.45475 11.6665 6.11095 11.6665H4.1665V14.6427Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>'+dataPODCASTS.item[q].count_listened+'</p></div></div></div><div class="some3"><svg class="some3_point" viewBox="0 0 24 24" fill="#969696"><circle class="some3_point" cx="12" cy="7" r="1.5"/><circle class="some3_point" cx="12" cy="12" r="1.5"/><circle class="some3_point" cx="12" cy="17" r="1.5"/></svg></div></div>';
+        }
+        document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].innerHTML=podcasts_container;
+    }
+    
+    
+    
+    if(dataNEWS.length == 0){
+        setTimeout(()=>{
+            document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].innerHTML = '<p style="margin:auto">Your news queue is empty</p>';
+        },50);
+    }else{
+        var news_container='';
+        
+        for(var i=0;i<dataNEWS.length;i++){
+            news_container+='<div data-id="'+i+'" class="some"><div class="some1 n"><img class="some1_img" src="'+dataNEWS[i].audio_img+'"></div><div class="some2"><p class="some2_text">'+dataNEWS[i].audio_name+'</p><div class="some2_container"><div><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="6" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 6.6665V10.8332H12.5" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>'+dataNEWS[i].duration+' мин</p></div><div><svg viewBox="0 0 20 20" fill="none"><path d="M4.1665 14.1665V10.1665C4.1665 8.57521 4.78109 7.04908 5.87505 5.92386C6.96901 4.79865 8.45274 4.1665 9.99984 4.1665C11.5469 4.1665 13.0307 4.79865 14.1246 5.92386C15.2186 7.04908 15.8332 8.57521 15.8332 10.1665V14.1665 M15.8332 14.6427C15.8332 14.9584 15.6966 15.2612 15.4535 15.4845C15.2104 15.7077 14.8807 15.8332 14.5369 15.8332H13.8887C13.5449 15.8332 13.2152 15.7077 12.9721 15.4845C12.729 15.2612 12.5924 14.9584 12.5924 14.6427V12.857C12.5924 12.5412 12.729 12.2384 12.9721 12.0152C13.2152 11.7919 13.5449 11.6665 13.8887 11.6665H15.8332V14.6427ZM4.1665 14.6427C4.1665 14.9584 4.30308 15.2612 4.54618 15.4845C4.78928 15.7077 5.119 15.8332 5.4628 15.8332H6.11095C6.45475 15.8332 6.78447 15.7077 7.02757 15.4845C7.27067 15.2612 7.40724 14.9584 7.40724 14.6427V12.857C7.40724 12.5412 7.27067 12.2384 7.02757 12.0152C6.78447 11.7919 6.45475 11.6665 6.11095 11.6665H4.1665V14.6427Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>'+dataNEWS[i].count_listened+'</p></div></div></div><div class="some3"><svg class="some3_point" viewBox="0 0 24 24" fill="#969696"><circle class="some3_point" cx="12" cy="7" r="1.5"/><circle class="some3_point" cx="12" cy="12" r="1.5"/><circle class="some3_point" cx="12" cy="17" r="1.5"/></svg></div></div>';
+        }
+        document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].innerHTML=news_container;
+        //document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].style.display='block';
+    } 
+    
+    
+    if(dataNEWS.length == 0 && dataPODCASTS.item.length == 0){
+        setTimeout(()=>{
+            document.getElementById('news_block_container').click();
+            document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].innerHTML = '<p style="margin:auto">Your news queue is empty</p>';
+            document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].innerHTML = '<p style="margin:auto">Your podcasts queue is empty</p>';
+        },50);
+    }else{
+       setTimeout(() => {
+            document.getElementById('audio').currentTime = localStorage.track_time;
+            if (localStorage.podcast_id == 0) {
+                document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].innerHTML+='<div id="loader"></div>  <div id="point_block"></div>';
+                document.getElementById('news_block_container').click();
+                document.getElementsByClassName('some1 n')[localStorage.track_id].firstElementChild.click();
+            }else{
+                document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].innerHTML+='<div id="loader"></div>  <div id="point_block"></div>';
+                document.getElementById('podcasts_block_container').click();
+                document.getElementsByClassName('some1 p')[localStorage.track_id].firstElementChild.click();
+            }
+        }, 50);
+    }
+}else{
+    localStorage.player = 4;
+    setTimeout(()=>{
+        document.getElementById('news_block_container').click();
+        document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].innerHTML = '<p style="margin:auto">Your news queue is empty</p>';
+        document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].innerHTML = '<p style="margin:auto">Your podcasts queue is empty</p>';
+    },50);
+}
+    
+    
+    
+var track_id = 0; 
+var play_stop = 'play';
+var repeat = 0;
+var random = 0;
+document.onclick=e=>{
+    if(e.target.className == 'some2_text' || e.target.className == 'some1_img' || e.target.className == 'some2'){
+       track_id=e.target.parentElement.parentElement.getAttribute('data-id') || e.target.parentElement.getAttribute('data-id');
+       localStorage.track_id = track_id;
+       document.getElementById('loader').remove();
+        
+       if(e.target.parentElement.parentElement.parentElement.className == 'player_container_block2_b1_menu_bl2_news' || e.target.parentElement.parentElement.className == 'player_container_block2_b1_menu_bl2_news'){
+           document.getElementById('audio').src = dataNEWS[track_id].file_link;
+           document.getElementById('picture').src = dataNEWS[track_id].audio_img;
+           document.getElementById('name').innerHTML = dataNEWS[track_id].audio_name;
+           document.getElementById('author').innerHTML = dataNEWS[track_id].author;
+           
+           document.getElementsByClassName('some1 n')[track_id].innerHTML+='<div id="loader"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div>';
+           
+           document.title = dataNEWS[track_id].author+' - '+dataNEWS[track_id].audio_name;
+           localStorage.podcast_id = 0;
+           
+           if(document.getElementById('point_block').innerHTML != ''){
+               if(dataNEWS[track_id].like == 0){
+                  document.getElementsByClassName('like')[3].style.stroke='#969696';
+                  document.getElementsByClassName('like')[3].style.fill='';
+               }else{
+                  document.getElementsByClassName('like')[3].style.stroke='red';
+                  document.getElementsByClassName('like')[3].style.fill='red';
+               }
+           }else{
+              if(dataNEWS[track_id].like == 0){
+                  document.getElementsByClassName('like')[1].style.stroke='#969696';
+                  document.getElementsByClassName('like')[1].style.fill='';
+              }else{
+                  document.getElementsByClassName('like')[1].style.stroke='red';
+                  document.getElementsByClassName('like')[1].style.fill='red';
+               } 
+           }
+           
+           var news_listened = JSON.parse( localStorage.history || '[]' );
+           news_listened.push(dataNEWS[track_id].id);
+           localStorage.history = JSON.stringify(Array.from(new Set(news_listened)));
+       }else{
+           document.getElementById('audio').src = dataPODCASTS.item[track_id].file_link;
+           document.getElementById('picture').src = dataPODCASTS.audio_img;
+           document.getElementById('name').innerHTML = dataPODCASTS.item[track_id].audio_name;
+           document.getElementById('author').innerHTML = dataPODCASTS.podcast_name;
+           
+           document.getElementsByClassName('some1 p')[track_id].innerHTML+='<div id="loader"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div>';
+           
+           document.title = dataPODCASTS.podcast_name+' - '+dataPODCASTS.item[track_id].audio_name;
+           localStorage.podcast_id = 1;
+           
+           
+           if(document.getElementById('point_block').innerHTML != ''){
+               if(dataPODCASTS.item[track_id].like == 0){
+                  document.getElementsByClassName('like')[3].style.stroke='#969696';
+                  document.getElementsByClassName('like')[3].style.fill='';
+               }else{
+                  document.getElementsByClassName('like')[3].style.stroke='red';
+                  document.getElementsByClassName('like')[3].style.fill='red';
+               }
+           }else{
+              if(dataPODCASTS.item[track_id].like == 0){
+                  document.getElementsByClassName('like')[1].style.stroke='#969696';
+                  document.getElementsByClassName('like')[1].style.fill='';
+              }else{
+                  document.getElementsByClassName('like')[1].style.stroke='red';
+                  document.getElementsByClassName('like')[1].style.fill='red';
+               } 
+           }
+       }
+        
+     
+       document.getElementById('audio').onloadedmetadata = function() {
+           document.getElementById('range').setAttribute('max', Math.round(document.getElementById('audio').duration * 1000));
+           document.getElementById('plend').innerHTML = parseInt(document.getElementById('audio').duration/60/60)+':'+parseInt(document.getElementById('audio').duration/60)+':'+parseInt(document.getElementById('audio').duration%60);
+           //document.getElementById('audio').play();
+           play_stop = 'play';
+           document.getElementById('hidden-play_stop').click();
+       }
+       
+       
+       var min = document.getElementById('range').min;
+       setInterval(() => {
+            var c = document.getElementById('audio').currentTime;
+            document.getElementById('plstart').innerHTML = parseInt(c/60/60)+':'+parseInt(c/60)+':'+parseInt(c%60);
+            document.getElementById('range').value = c * 1000;
+
+            document.getElementById('range').style.backgroundSize = (document.getElementById('range').value - min) * 100 / (document.getElementById('range').max - min) + '% 100%';
+            localStorage.track_time = c;
+           
+           if (c == document.getElementById('audio').duration) {
+                if(repeat == 1){ 
+                   document.getElementById('audio').play();
+                }else if(random == 1){
+                    if (localStorage.podcast_id == 0) {
+                        document.getElementsByClassName('some1 n')[Math.floor(Math.random() * ((dataNEWS.length - 1) - 0 + 1)) + 0].firstChild.click();
+                    } else {
+                        document.getElementsByClassName('some1 p')[Math.floor(Math.random() * ((dataPODCASTS.item.length - 1) - 0 + 1)) + 0].firstChild.click();
+                    }      
+                }else{
+                   document.getElementById('hidden_next').click();  
+                } 
+           }
+        }, 50);
+    }else if(e.target.id == 'play_stop' || e.target.id == 'play_stop1' || e.target.id == 'hidden-play_stop'){
+        if (play_stop == 'stop') {
+            document.getElementById('audio').pause();
+            document.getElementById('play_stop').innerHTML='<path id="play_stop1" d="M23.6693 17.1095C24.4609 16.5818 24.4609 15.4185 23.6693 14.8907L11.4063 6.71543C10.5202 6.12472 9.33337 6.75991 9.33337 7.82483V24.1755C9.33337 25.2404 10.5202 25.8756 11.4063 25.2849L23.6693 17.1095Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>'; 
+            play_stop = 'play';
+            document.getElementById('loader').innerHTML='<div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div>';
+        }else{
+            document.getElementById('audio').play();
+            document.getElementById('play_stop').innerHTML='<path id="play_stop1" d="M6.6665 7.99984C6.6665 7.26346 7.26346 6.6665 7.99984 6.6665H11.9998C12.7362 6.6665 13.3332 7.26346 13.3332 7.99984V23.9998C13.3332 24.7362 12.7362 25.3332 11.9998 25.3332H7.99984C7.26346 25.3332 6.6665 24.7362 6.6665 23.9998V7.99984Z M18.667 7.99984C18.667 7.26346 19.2639 6.6665 20.0003 6.6665H24.0003C24.7367 6.6665 25.3337 7.26346 25.3337 7.99984V23.9998C25.3337 24.7362 24.7367 25.3332 24.0003 25.3332H20.0003C19.2639 25.3332 18.667 24.7362 18.667 23.9998V7.99984Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>'; 
+            play_stop = 'stop';
+            document.getElementById('loader').innerHTML='<div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div>';
+        }
+    }else if(e.target.id == 'prev' || e.target.id == 'prev1'){
+        if (track_id != 0) {
+            var prev = track_id;
+            prev--;
+            if (localStorage.podcast_id == 0) {
+                document.getElementsByClassName('some1 n')[prev].firstChild.click();
+            } else {
+                document.getElementsByClassName('some1 p')[prev].firstChild.click();
+            }
+        }   
+    }else if(e.target.id == 'next' || e.target.id == 'next1' || e.target.id == 'hidden_next'){
+        var next = track_id;
+        next++;
+        if (localStorage.podcast_id == 0) {
+            if (track_id != (dataNEWS.length - 1)) {
+                document.getElementsByClassName('some1 n')[next].firstChild.click();
+            }else{
+                document.getElementsByClassName('some1 n')[0].firstChild.click();
+            }
+        } else {
+            if (track_id != dataPODCASTS.item.length - 1) {
+                document.getElementsByClassName('some1 p')[next].firstChild.click();
+            }else{
+                document.getElementsByClassName('some1 p')[0].firstChild.click();
+            }
+        }    
+    }else if(e.target.getAttribute('class') == 'playlist_menu'){
+        if(document.getElementsByClassName('player_container_block2_b1_menu')[0].style.display=='none'){
+            document.getElementsByClassName('player_container_block2_b1_menu')[0].style.display='flex';
+        }else{
+            document.getElementsByClassName('player_container_block2_b1_menu')[0].style.display='none';   
+        }
+    }else if(e.target.className == 'l' || e.target.id == 'loader' || e.target.className == 'm'){
+        document.getElementById('hidden-play_stop').click();
+    }else if(e.target.id == 'speed_num'){
+        if(document.getElementById('speed_block').style.display == 'flex'){
+            document.getElementById('speed_block').style.display='none';
+        }else{
+            document.getElementById('speed_block').style.display='flex';
+        }
+    }else if(e.target.className == 'speed'){  
+        document.getElementById('audio').playbackRate = parseFloat(e.target.innerHTML);
+        document.getElementById('speed_block').style.display='none';
+        document.getElementById('speed_num').innerHTML=e.target.innerHTML;
+    }else if(e.target.getAttribute('class') == 'some3_point'){
+        if(e.target.style.fill == 'red' || e.target.parentNode.style.fill == 'red'){
+            document.getElementById('point_block').previousElementSibling.style.fill='#969696';
+            document.getElementById('point_block').remove();
+        }else{
+            if(document.getElementById('point_block')){
+               document.getElementById('point_block').previousElementSibling.style.fill='#969696';
+               document.getElementById('point_block').remove(); 
+            }
+
+            var like_color='';
+            if(e.target.nodeName == 'svg'){
+                if(e.target.parentNode.previousSibling.previousSibling.className == 'some1 n'){
+                    if(dataNEWS[e.target.parentNode.parentNode.getAttribute('data-id')].like == 1){
+                        like_color='red';
+                    }else{
+                        like_color='#969696';
+                    }
+                }else{
+                    if(dataPODCASTS.item[e.target.parentNode.parentNode.getAttribute('data-id')].like == 1){
+                        like_color='red';
+                    }else{
+                        like_color='#969696';
+                    }
+                }
+
+                e.target.parentNode.innerHTML+='<div id="point_block"><div><svg viewBox="0 0 20 20" fill="none"><path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0C1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.25 6.66797C11.25 7.35832 10.6904 7.91797 10 7.91797C9.30964 7.91797 8.75 7.35832 8.75 6.66797C8.75 5.97761 9.30964 5.41797 10 5.41797C10.6904 5.41797 11.25 5.97761 11.25 6.66797Z" fill="#0C1827"/><path d="M10 10V13.3333" stroke="#0C1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Перейти к новости</div><div class="like"><svg class="like" viewBox="0 0 20 21" fill="'+like_color+'"><path class="like" d="M16.3434 5.01226C15.9768 4.63856 15.5417 4.34211 15.0627 4.13985C14.5837 3.9376 14.0704 3.8335 13.5519 3.8335C13.0335 3.8335 12.5201 3.9376 12.0411 4.13985C11.5621 4.34211 11.127 4.63856 10.7605 5.01226L9.99981 5.78746L9.23916 5.01226C8.49882 4.25776 7.4947 3.83389 6.44771 3.83389C5.40071 3.83389 4.39659 4.25776 3.65626 5.01226C2.91592 5.76676 2.5 6.79008 2.5 7.8571C2.5 8.92412 2.91592 9.94744 3.65626 10.7019L4.41691 11.4771L9.99981 17.1668L15.5827 11.4771L16.3434 10.7019C16.71 10.3284 17.0009 9.88492 17.1994 9.39679C17.3979 8.90867 17.5 8.38547 17.5 7.8571C17.5 7.32873 17.3979 6.80554 17.1994 6.31741C17.0009 5.82928 16.71 5.38579 16.3434 5.01226V5.01226Z" stroke="'+like_color+'" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Like</div><div class="share"><svg class="share" viewBox="0 0 20 20" fill="none"><path class="share" d="M12.5 4.16797L10 1.66797M10 1.66797L7.5 4.16797M10 1.66797L10 11.668" stroke="#0C1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="share" d="M5.00016 6.66797H3.3335V14.668C3.3335 15.7725 4.22893 16.668 5.3335 16.668H14.6668C15.7714 16.668 16.6668 15.7725 16.6668 14.668V6.66797H15.0002" stroke="#0C1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Поделиться</div><div class="delete"><svg class="delete" viewBox="0 0 20 20" fill="none"><path class="delete" d="M7.80612 5.33333V3.5C7.80612 3.10218 7.94803 2.72064 8.20063 2.43934C8.45323 2.15804 8.79583 2 9.15306 2H11.8469C12.2042 2 12.5468 2.15804 12.7994 2.43934C13.052 2.72064 13.1939 3.10218 13.1939 3.5V5.33333M16 5.33333L15.2143 15.5C15.2143 15.8978 15.0724 16.2794 14.8198 16.5607C14.5672 16.842 14.2246 17 13.8673 17H7.13265C6.77542 17 6.43282 16.842 6.18022 16.5607C5.92762 16.2794 5.78571 15.8978 5.78571 15.5L5 5.33333H16Z M4 5H5.44444H17 M9 9V13 M12 9V13" stroke="#F63867" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Удалить</div></div>';
+            }else{
+                if(e.target.parentNode.parentNode.previousSibling.previousSibling.className == 'some1 n'){
+                    if(dataNEWS[e.target.parentNode.parentNode.parentNode.getAttribute('data-id')].like == 1){
+                        like_color='red';
+                    }else{
+                        like_color='#969696';
+                    }
+                }else{
+                    if(dataPODCASTS.item[e.target.parentNode.parentNode.parentNode.getAttribute('data-id')].like == 1){
+                        like_color='red';
+                    }else{
+                        like_color='#969696';
+                    }
+                }
+
+                e.target.parentNode.parentNode.innerHTML+='<div id="point_block"><div><svg viewBox="0 0 20 20" fill="none"><path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0C1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.25 6.66797C11.25 7.35832 10.6904 7.91797 10 7.91797C9.30964 7.91797 8.75 7.35832 8.75 6.66797C8.75 5.97761 9.30964 5.41797 10 5.41797C10.6904 5.41797 11.25 5.97761 11.25 6.66797Z" fill="#0C1827"/><path d="M10 10V13.3333" stroke="#0C1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Перейти к новости</div><div class="like"><svg class="like" viewBox="0 0 20 21" fill="'+like_color+'"><path class="like" d="M16.3434 5.01226C15.9768 4.63856 15.5417 4.34211 15.0627 4.13985C14.5837 3.9376 14.0704 3.8335 13.5519 3.8335C13.0335 3.8335 12.5201 3.9376 12.0411 4.13985C11.5621 4.34211 11.127 4.63856 10.7605 5.01226L9.99981 5.78746L9.23916 5.01226C8.49882 4.25776 7.4947 3.83389 6.44771 3.83389C5.40071 3.83389 4.39659 4.25776 3.65626 5.01226C2.91592 5.76676 2.5 6.79008 2.5 7.8571C2.5 8.92412 2.91592 9.94744 3.65626 10.7019L4.41691 11.4771L9.99981 17.1668L15.5827 11.4771L16.3434 10.7019C16.71 10.3284 17.0009 9.88492 17.1994 9.39679C17.3979 8.90867 17.5 8.38547 17.5 7.8571C17.5 7.32873 17.3979 6.80554 17.1994 6.31741C17.0009 5.82928 16.71 5.38579 16.3434 5.01226V5.01226Z" stroke="'+like_color+'" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Like</div><div class="share"><svg class="share" viewBox="0 0 20 20" fill="none"><path class="share" d="M12.5 4.16797L10 1.66797M10 1.66797L7.5 4.16797M10 1.66797L10 11.668" stroke="#0C1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="share" d="M5.00016 6.66797H3.3335V14.668C3.3335 15.7725 4.22893 16.668 5.3335 16.668H14.6668C15.7714 16.668 16.6668 15.7725 16.6668 14.668V6.66797H15.0002" stroke="#0C1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Поделиться</div><div class="delete"><svg class="delete" viewBox="0 0 20 20" fill="none"><path class="delete" d="M7.80612 5.33333V3.5C7.80612 3.10218 7.94803 2.72064 8.20063 2.43934C8.45323 2.15804 8.79583 2 9.15306 2H11.8469C12.2042 2 12.5468 2.15804 12.7994 2.43934C13.052 2.72064 13.1939 3.10218 13.1939 3.5V5.33333M16 5.33333L15.2143 15.5C15.2143 15.8978 15.0724 16.2794 14.8198 16.5607C14.5672 16.842 14.2246 17 13.8673 17H7.13265C6.77542 17 6.43282 16.842 6.18022 16.5607C5.92762 16.2794 5.78571 15.8978 5.78571 15.5L5 5.33333H16Z M4 5H5.44444H17 M9 9V13 M12 9V13" stroke="#F63867" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Удалить</div></div>';
+            } 
+            document.getElementById('point_block').previousElementSibling.style.fill='red';
+        }
+    }else if(e.target.getAttribute('class') == 'share'){ 
+        var link_id='';
+        if(e.target.getAttribute('data-pl') == ''){
+            console.log('datapl yes');
+            if (localStorage.podcast_id == 0) {
+                link_id='https://127.0.0.1/newslink?id='+dataNEWS[track_id].id;
+            }else{
+                link_id='https://127.0.0.1/podcastlink?id='+dataPODCASTS.id+'-'+track_id;
+            }
+        }else{
+            if(e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute('data-id')){
+               if(e.target.parentNode.parentNode.parentNode.parentNode.parentNode.firstElementChild.className == 'some1 n'){
+                  link_id='https://127.0.0.1/newslink?id='+dataNEWS[e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute('data-id')].id;
+               }else{
+                   link_id='https://127.0.0.1/podcastlink?id='+dataPODCASTS.id+'-'+e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute('data-id');
+               }
+            }else if(e.target.parentNode.parentNode.parentNode.parentNode.getAttribute('data-id')){
+               if(e.target.parentNode.parentNode.parentNode.parentNode.firstElementChild.className == 'some1 n'){
+                  link_id='https://127.0.0.1/newslink?id='+dataNEWS[e.target.parentNode.parentNode.parentNode.parentNode.getAttribute('data-id')].id;
+               }else{
+                   link_id='https://127.0.0.1/podcastlink?id='+dataPODCASTS.id+'-'+e.target.parentNode.parentNode.parentNode.parentNode.getAttribute('data-id');
+               }
+            }else{
+               if(e.target.parentNode.parentNode.parentNode.firstElementChild.className == 'some1 n'){
+                  link_id='https://127.0.0.1/newslink?id='+dataNEWS[e.target.parentNode.parentNode.parentNode.getAttribute('data-id')].id;
+               }else{
+                   link_id='https://127.0.0.1/podcastlink?id='+dataPODCASTS.id+'-'+e.target.parentNode.parentNode.parentNode.getAttribute('data-id');
+               }  
+            }
+            
+        }
+        
+        document.getElementById('copy-buffer').style.display='block';
+        document.getElementById('copy-buffer').style.opacity=1.0;
+        navigator.clipboard.writeText(link_id);
+              
+
+        var copy_timer;
+        var opacity=1.0;
+        var copy_count=0;
+        
+        setTimeout(() => {
+            copy_timer=setInterval(() => {
+                if(copy_count == 22){
+                    clearInterval(copy_timer);
+                    document.getElementById('copy-buffer').style.display='none';
+                }else{
+                    document.getElementById('copy-buffer').style.opacity=opacity;
+                    opacity-=0.05;
+                    copy_count++;
+                }
+            }, 50);
+        }, 2000);
+    }else if(e.target.getAttribute('class') == 'repeat'){
+        if(repeat == 0){
+           document.getElementsByClassName('repeat')[1].style.stroke='red';
+           repeat++;
+           if(random == 1){
+              document.getElementsByClassName('random')[1].style.stroke='#969696';
+              random--;  
+           }
+        }else{
+           document.getElementsByClassName('repeat')[1].style.stroke='#969696';
+           repeat--;
+        }   
+    }else if(e.target.getAttribute('class') == 'random'){
+        if(random == 0){
+           document.getElementsByClassName('random')[1].style.stroke='red';
+           random++;
+           if(repeat == 1){
+              document.getElementsByClassName('repeat')[1].style.stroke='#969696';
+              repeat--;  
+           }
+        }else{
+           document.getElementsByClassName('random')[1].style.stroke='#969696';
+           random--;
+        }   
+    }else if(e.target.getAttribute('class') == 'like'){
+        if(e.target.getAttribute('data-pl') == ''){
+            if(localStorage.podcast_id == 0){
+                if(document.getElementById('point_block').innerHTML == ''){
+                   if(dataNEWS[track_id].like == 1){
+                      document.getElementsByClassName('like')[1].style.stroke='#969696';
+                      document.getElementsByClassName('like')[1].style.fill='';
+                      dataNEWS[track_id].like = 0;
+                   }else{
+                      document.getElementsByClassName('like')[1].style.stroke='red';
+                      document.getElementsByClassName('like')[1].style.fill='red';
+                      dataNEWS[track_id].like = 1;
+                   }
+                   localStorage.news=JSON.stringify(dataNEWS);
+                }else{
+                   if(document.getElementById('point_block').parentNode.parentNode.parentNode.className == 'player_container_block2_b1_menu_bl2_news'){
+                       if(document.getElementById('point_block').parentNode.parentNode.getAttribute('data-id') == track_id){
+                           if(dataNEWS[track_id].like == 1){
+                              document.getElementsByClassName('like')[2].style.stroke='#969696';
+                              document.getElementsByClassName('like')[2].style.fill='#969696';
+                               
+                              document.getElementsByClassName('like')[4].style.stroke='#969696';
+                              document.getElementsByClassName('like')[4].style.fill='';
+                              dataNEWS[track_id].like = 0;
+                           }else{
+                              document.getElementsByClassName('like')[2].style.stroke='red';
+                              document.getElementsByClassName('like')[2].style.fill='red';
+                               
+                              document.getElementsByClassName('like')[4].style.stroke='red';
+                              document.getElementsByClassName('like')[4].style.fill='red';
+                              dataNEWS[track_id].like = 1; 
+                           }
+                       }else{
+                           if(dataNEWS[track_id].like == 1){
+                              document.getElementsByClassName('like')[4].style.stroke='#969696';
+                              document.getElementsByClassName('like')[4].style.fill=''; 
+                              dataNEWS[track_id].like = 0;
+                           }else{
+                              document.getElementsByClassName('like')[4].style.stroke='red';
+                              document.getElementsByClassName('like')[4].style.fill='red'; 
+                              dataNEWS[track_id].like = 1; 
+                           }
+                       }
+                   }else{
+                       if(dataNEWS[track_id].like == 1){
+                            document.getElementsByClassName('like')[4].style.stroke='#969696';
+                            document.getElementsByClassName('like')[4].style.fill=''; 
+                            dataNEWS[track_id].like = 0;
+                        }else{
+                            document.getElementsByClassName('like')[4].style.stroke='red';
+                            document.getElementsByClassName('like')[4].style.fill='red'; 
+                            dataNEWS[track_id].like = 1; 
+                        }
+                   }
+                   localStorage.news=JSON.stringify(dataNEWS);   
+                }
+            }else{//активный подкаст
+                if(document.getElementById('point_block').innerHTML == ''){
+                   if(dataPODCASTS.item[track_id].like == 1){
+                      document.getElementsByClassName('like')[1].style.stroke='#969696';
+                      document.getElementsByClassName('like')[1].style.fill='';
+                      dataPODCASTS.item[track_id].like = 0;
+                   }else{
+                      document.getElementsByClassName('like')[1].style.stroke='red';
+                      document.getElementsByClassName('like')[1].style.fill='red';
+                      dataPODCASTS.item[track_id].like = 1;
+                   }
+                   localStorage.podcasts=JSON.stringify(dataPODCASTS);
+                }else{
+                   if(document.getElementById('point_block').parentNode.parentNode.parentNode.className == 'player_container_block2_b1_menu_bl2_podcasts'){
+                       if(document.getElementById('point_block').parentNode.parentNode.getAttribute('data-id') == track_id){
+                          if(dataPODCASTS.item[track_id].like == 1){
+                              document.getElementsByClassName('like')[2].style.stroke='#969696';
+                              document.getElementsByClassName('like')[2].style.fill='#969696';
+                               
+                              document.getElementsByClassName('like')[4].style.stroke='#969696';
+                              document.getElementsByClassName('like')[4].style.fill='';
+                              dataPODCASTS.item[track_id].like = 0;
+                           }else{
+                              document.getElementsByClassName('like')[2].style.stroke='red';
+                              document.getElementsByClassName('like')[2].style.fill='red';
+                               
+                              document.getElementsByClassName('like')[4].style.stroke='red';
+                              document.getElementsByClassName('like')[4].style.fill='red';
+                              dataPODCASTS.item[track_id].like = 1; 
+                           }
+                           localStorage.podcasts=JSON.stringify(dataPODCASTS);
+                       }else{ 
+                          if(dataPODCASTS.item[track_id].like == 1){
+                              document.getElementsByClassName('like')[4].style.stroke='#969696';
+                              document.getElementsByClassName('like')[4].style.fill=''; 
+                              dataPODCASTS.item[track_id].like = 0;
+                           }else{
+                              document.getElementsByClassName('like')[4].style.stroke='red';
+                              document.getElementsByClassName('like')[4].style.fill='red'; 
+                              dataPODCASTS.item[track_id].like = 1; 
+                           }
+                           localStorage.podcasts=JSON.stringify(dataPODCASTS);
+                       }
+                   }else{
+                       if(dataPODCASTS.item[track_id].like == 1){
+                            document.getElementsByClassName('like')[4].style.stroke='#969696';
+                            document.getElementsByClassName('like')[4].style.fill=''; 
+                            dataPODCASTS.item[track_id].like = 0;
+                        }else{
+                            document.getElementsByClassName('like')[4].style.stroke='red';
+                            document.getElementsByClassName('like')[4].style.fill='red'; 
+                            dataPODCASTS.item[track_id].like = 1; 
+                        }
+                        localStorage.podcasts=JSON.stringify(dataPODCASTS);
+                   }
+                }
+            }
+        }else{
+            var index= e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute('data-id') || e.target.parentNode.parentNode.parentNode.parentNode.getAttribute('data-id') || e.target.parentNode.parentNode.parentNode.getAttribute('data-id');
+            if(document.getElementById('point_block').parentNode.parentNode.parentNode.className == 'player_container_block2_b1_menu_bl2_podcasts'){
+                if(index == track_id && localStorage.podcast_id == 1){
+                    if(dataPODCASTS.item[index].like == 1){
+                        document.getElementsByClassName('like')[2].style.stroke='#969696';
+                        document.getElementsByClassName('like')[2].style.fill='#969696';
+                               
+                        document.getElementsByClassName('like')[4].style.stroke='#969696';
+                        document.getElementsByClassName('like')[4].style.fill='';
+                        dataPODCASTS.item[index].like = 0;
+                    }else{
+                        document.getElementsByClassName('like')[2].style.stroke='red';
+                        document.getElementsByClassName('like')[2].style.fill='red';
+                               
+                        document.getElementsByClassName('like')[4].style.stroke='red';
+                        document.getElementsByClassName('like')[4].style.fill='red';
+                        dataPODCASTS.item[index].like = 1; 
+                    }
+                }else{
+                    if(dataPODCASTS.item[index].like == 1){
+                        document.getElementsByClassName('like')[2].style.stroke='#969696';
+                        document.getElementsByClassName('like')[2].style.fill='';
+                        dataPODCASTS.item[index].like = 0;
+                    }else{
+                        document.getElementsByClassName('like')[2].style.stroke='red';
+                        document.getElementsByClassName('like')[2].style.fill='red';
+                        dataPODCASTS.item[index].like = 1; 
+                    }
+                }
+                localStorage.podcasts=JSON.stringify(dataPODCASTS);
+            }else{
+                if(index == track_id && localStorage.podcast_id == 0){
+                    if(dataNEWS[index].like == 1){
+                        document.getElementsByClassName('like')[2].style.stroke='#969696';
+                        document.getElementsByClassName('like')[2].style.fill='#969696';
+                        
+                        document.getElementsByClassName('like')[4].style.stroke='#969696';
+                        document.getElementsByClassName('like')[4].style.fill='';
+                        dataNEWS[index].like = 0;
+                    }else{
+                        document.getElementsByClassName('like')[2].style.stroke='red';
+                        document.getElementsByClassName('like')[2].style.fill='red';
+                        
+                        document.getElementsByClassName('like')[4].style.stroke='red';
+                        document.getElementsByClassName('like')[4].style.fill='red';
+                        dataNEWS[index].like = 1; 
+                    } 
+                }else{
+                    if(dataNEWS[index].like == 1){
+                        document.getElementsByClassName('like')[2].style.stroke='#969696';
+                        document.getElementsByClassName('like')[2].style.fill='#969696';
+                        dataNEWS[index].like = 0;
+                    }else{
+                        document.getElementsByClassName('like')[2].style.stroke='red';
+                        document.getElementsByClassName('like')[2].style.fill='red';
+                        dataNEWS[index].like = 1; 
+                    }
+                }
+                localStorage.news=JSON.stringify(dataNEWS);
+            }
+        }
+    }else if(e.target.getAttribute('class') == 'delete'){
+        var index = e.target.parentNode.parentNode.parentNode.getAttribute('data-id') || e.target.parentNode.parentNode.parentNode.parentNode.getAttribute('data-id') || e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute('data-id');
+        
+        if(e.target.parentNode.parentNode.parentNode.parentNode.getAttribute('class') == 'player_container_block2_b1_menu_bl2_news' || e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute('class') == 'player_container_block2_b1_menu_bl2_news' || e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute('class') == 'player_container_block2_b1_menu_bl2_news'){
+           document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].getElementsByClassName('some')[index].remove();
+           dataNEWS[index] = undefined;
+            
+           var newNews = [];
+           for (var v = 0; v < dataNEWS.length; v++) {
+                if (dataNEWS[v] != undefined) {
+                    newNews.push(dataNEWS[v]);
+                }
+           }
+           dataNEWS = newNews;
+            
+           for (var v = 0; v < dataNEWS.length; v++) {
+                document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].getElementsByClassName('some')[v].setAttribute('data-id', v);
+           }
+           localStorage.news = JSON.stringify(dataNEWS);
+           
+           if (index == track_id) {
+               if (dataNEWS.length == 0) {
+                   document.getElementById('audio').src = '';
+                   document.getElementById('picture').src = '';
+                   document.getElementById('name').innerHTML = '';
+                   document.getElementById('author').innerHTML = '';
+                   document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].innerHTML = '<p style="margin:auto">Your news queue is empty</p><div id="loader"></div>';
+               }else{
+                   document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].innerHTML+='<div id="loader"></div>';
+                   if (track_id == dataNEWS.length) {
+                        document.getElementsByClassName('some1 n')[0].getElementsByClassName('some1_img')[0].click();
+                   } else {
+                       document.getElementsByClassName('some1 n')[track_id].getElementsByClassName('some1_img')[0].click();
+                   }
+               }
+           }else{
+               if(dataNEWS.length == 1){
+                   track_id=0;
+               }
+           }
+        }else{
+           document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].getElementsByClassName('some')[index].remove();
+           dataPODCASTS.item[index] = undefined;
+            
+           var newPodcasts = [];
+           for (var v = 0; v < dataPODCASTS.item.length; v++) {
+                if (dataPODCASTS.item[v] != undefined) {
+                    newPodcasts.push(dataPODCASTS.item[v]);
+                }
+           }
+           dataPODCASTS.item = newPodcasts;
+           
+           for (var v = 0; v < dataPODCASTS.item.length; v++) {
+                document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].getElementsByClassName('some')[v].setAttribute('data-id', v);
+           }
+           localStorage.podcasts = JSON.stringify(dataPODCASTS);
+           
+           if (index == track_id) {
+               if (dataPODCASTS.item == 0) {
+                   document.getElementById('audio').src = '';
+                   document.getElementById('picture').src = '';
+                   document.getElementById('name').innerHTML = '';
+                   document.getElementById('author').innerHTML = '';
+                   document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].innerHTML = '<p style="margin:auto">Your podcasts queue is empty</p><div id="loader"></div>';
+               }else{
+                   document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].innerHTML+='<div id="loader"></div>';
+                   if (track_id == dataPODCASTS.item.length) {
+                        document.getElementsByClassName('some1 p')[0].getElementsByClassName('some1_img')[0].click();
+                   } else {
+                       document.getElementsByClassName('some1 p')[track_id].getElementsByClassName('some1_img')[0].click();
+                   }
+               }
+           }else{
+               if(dataPODCASTS.item.length == 1){
+                   track_id=0;
+               }
+           }
+        }
+    }else if(e.target.getAttribute('class') == 'settings'){
+        if(document.getElementsByClassName('settings_div')[0].style.display == 'block'){
+           document.getElementsByClassName('settings_div')[0].style.display='none';  
+        }else{
+           document.getElementsByClassName('settings_div')[0].style.display='block';  
+        }
+    }else if( e.target.getAttribute('class') == 'light_theme'){
+        document.documentElement.style.setProperty('--first', '#EBECF0'); 
+        document.documentElement.style.setProperty('--second', '#fff');
+        document.documentElement.style.setProperty('--third', '#000');
+        document.documentElement.style.setProperty('--forth', '#0C1827');
+        document.documentElement.style.setProperty('--fifth', '#E2F8F7');
+        document.documentElement.style.setProperty('--six', '#44C9C5');
+        document.documentElement.style.setProperty('--seventh', 'none');
+        document.documentElement.style.setProperty('--eight', '#0C1827');
+        localStorage.lang='light';
+        document.getElementsByClassName('container_page')[0].contentWindow.postMessage('light_theme', '*');
+    }else if( e.target.getAttribute('class') == 'dark_theme'){
+        document.documentElement.style.setProperty('--first', '#141414');
+        document.documentElement.style.setProperty('--second', '#1B1B1B');
+        document.documentElement.style.setProperty('--third', '#fff');
+        document.documentElement.style.setProperty('--forth', '#ecefef');
+        document.documentElement.style.setProperty('--fifth', 'none');
+        document.documentElement.style.setProperty('--six', '#ecefef');
+        document.documentElement.style.setProperty('--seventh', '#E2F8F7');
+        document.documentElement.style.setProperty('--eight', '#44C9C5');
+        localStorage.lang='dark';
+        document.getElementsByClassName('container_page')[0].contentWindow.postMessage('dark_theme', '*');
+    }else if(e.target.getAttribute('class') == 'prev_remote'){        
+        if(document.getElementsByClassName('prev_remote')[2].innerHTML[document.getElementsByClassName('prev_remote')[2].innerHTML.length-1] == 'c'){
+           if(document.getElementById('audio').currentTime - parseInt(document.getElementsByClassName('prev_remote')[2].innerHTML) <=0){
+               console.log('Значение в секундах меньше либо равно 0');
+               document.getElementById('audio').currentTime=0;
+           }else{
+              console.log('Значение в секундах больше 0');
+               document.getElementById('audio').currentTime=document.getElementById('audio').currentTime - parseInt(document.getElementsByClassName('prev_remote')[2].innerHTML);
+           } 
+        }else{
+           if(document.getElementById('audio').currentTime - (parseInt(document.getElementsByClassName('prev_remote')[2].innerHTML)*60) <=0){
+               console.log('Значение в минутах меньше либо равно 0');
+               document.getElementById('audio').currentTime=0;
+           }else{
+               console.log('Значение в минутах больше 0');
+               document.getElementById('audio').currentTime=document.getElementById('audio').currentTime - (parseInt(document.getElementsByClassName('prev_remote')[2].innerHTML)*60);
+           } 
+        }
+    }else if(e.target.getAttribute('class') == 'next_remote'){
+        if(document.getElementsByClassName('next_remote')[2].innerHTML[document.getElementsByClassName('next_remote')[2].innerHTML.length-1] == 'c'){
+           if(document.getElementById('audio').currentTime + parseInt(document.getElementsByClassName('next_remote')[2].innerHTML) >=document.getElementById('audio').duration){
+               console.log('Значение в секундах больше либо равно длинне файла');
+               document.getElementById('audio').currentTime=0;
+           }else{
+               console.log('Значение в секундах меньше чем длинна файла'); 
+               document.getElementById('audio').currentTime=document.getElementById('audio').currentTime + parseInt(document.getElementsByClassName('next_remote')[2].innerHTML);
+           }
+        }else{
+           if(document.getElementById('audio').currentTime + (parseInt(document.getElementsByClassName('next_remote')[2].innerHTML)*60) >=document.getElementById('audio').duration){
+               console.log('Значение в минутах больше либо равно длинне файла');
+               document.getElementById('audio').currentTime=0;
+           }else{
+               console.log('Значение в минутах меньше чем длинна файла'); 
+               document.getElementById('audio').currentTime=document.getElementById('audio').currentTime + (parseInt(document.getElementsByClassName('next_remote')[2].innerHTML)*60);
+           } 
+        }
+    }else if( e.target.getAttribute('class') == 'player_container_block1_pages my_stream' || e.target.getAttribute('class') == 'my_stream'){
+        document.getElementsByClassName('container_page')[0].src='pages/my_stream.html';
+        document.getElementsByClassName('player_container_block1_pages')[0].style.background = '#E2F8F7';
+        document.getElementsByClassName('player_container_block1_pages')[0].style.color = '#44C9C5';
+        document.getElementsByClassName('my_stream')[1].style.stroke = '#44C9C5';
+        
+        if(localStorage.page && localStorage.page[0] != 0){
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].style.background = '';
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].style.color = '';
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].firstElementChild.style.stroke = '';  
+        }
+        
+        localStorage.page = 0;
+    }else if( e.target.getAttribute('class') == 'player_container_block1_pages news' || e.target.getAttribute('class') == 'news'){ 
+        document.getElementsByClassName('container_page')[0].src='pages/news.html';
+        document.getElementsByClassName('player_container_block1_pages')[1].style.background = '#E2F8F7';
+        document.getElementsByClassName('player_container_block1_pages')[1].style.color = '#44C9C5';
+        document.getElementsByClassName('news')[1].style.stroke = '#44C9C5'; 
+        
+        if(localStorage.page && localStorage.page[0] != 1){
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].style.background = '';
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].style.color = '';
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].firstElementChild.style.stroke = '';   
+           localStorage.page = 1;
+        }
+    }else if( e.target.getAttribute('class') == 'player_container_block1_pages podcasts' || e.target.getAttribute('class') == 'podcasts'){  
+        document.getElementsByClassName('container_page')[0].src='pages/podcasts.html';
+        document.getElementsByClassName('player_container_block1_pages')[2].style.background = '#E2F8F7';
+        document.getElementsByClassName('player_container_block1_pages')[2].style.color = '#44C9C5';
+        document.getElementsByClassName('podcasts')[1].style.stroke = '#44C9C5';
+        
+        if(localStorage.page && localStorage.page[0] != 2){
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].style.background = '';
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].style.color = '';
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].firstElementChild.style.stroke = ''; 
+           localStorage.page = 2;
+        }
+    }else if( e.target.getAttribute('class') == 'player_container_block1_pages search' || e.target.getAttribute('class') == 'search'){
+        document.getElementsByClassName('container_page')[0].src='pages/search.html';
+        document.getElementsByClassName('player_container_block1_pages')[3].style.background = '#E2F8F7';
+        document.getElementsByClassName('player_container_block1_pages')[3].style.color = '#44C9C5';
+        document.getElementsByClassName('search')[1].style.stroke = '#44C9C5';
+        
+        if(localStorage.page && localStorage.page[0] != 3){
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].style.background = '';
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].style.color = '';
+           document.getElementsByClassName('player_container_block1_pages')[localStorage.page[0]].firstElementChild.style.stroke = '';   
+        }
+        
+        localStorage.page = 3;
+    }else if(e.target.id == 'news_block' || e.target.id == 'news_block_container'){
+        document.getElementById('podcasts_block_container').style.border='none';
+        document.getElementById('podcasts_block_container').style.background='none';
+        
+        document.getElementById('news_block_container').style.border='1px solid #44c9c5';
+        document.getElementById('news_block_container').style.background='rgba(228,255,255,.16)';  
+        
+        document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].style.display='none';
+        document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].style.display='flex';
+    }else if(e.target.id == 'podcasts_block' || e.target.id == 'podcasts_block_container'){
+        document.getElementById('news_block_container').style.border='none';
+        document.getElementById('news_block_container').style.background='none';
+        
+        document.getElementById('podcasts_block_container').style.border='1px solid #44c9c5';
+        document.getElementById('podcasts_block_container').style.background='rgba(228,255,255,.16)';  
+        
+        document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].style.display='none';
+        document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].style.display='flex';     
+    }
+}  
+
+
+
+
+
+window.onmessage=e=>{
+   if(Array.isArray(e.data)){
+       var iframe_news='';
+       for(var i=0;i<event.data.length;i++){
+            iframe_news+='<div data-id="'+i+'" class="some"><div class="some1 n"><img class="some1_img" src="'+event.data[i].audio_img+'"></div><div class="some2"><p class="some2_text">'+event.data[i].audio_name+'</p><div class="some2_container"><div><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="6" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 6.6665V10.8332H12.5" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>'+event.data[i].duration+' мин</p></div><div><svg viewBox="0 0 20 20" fill="none"><path d="M4.1665 14.1665V10.1665C4.1665 8.57521 4.78109 7.04908 5.87505 5.92386C6.96901 4.79865 8.45274 4.1665 9.99984 4.1665C11.5469 4.1665 13.0307 4.79865 14.1246 5.92386C15.2186 7.04908 15.8332 8.57521 15.8332 10.1665V14.1665 M15.8332 14.6427C15.8332 14.9584 15.6966 15.2612 15.4535 15.4845C15.2104 15.7077 14.8807 15.8332 14.5369 15.8332H13.8887C13.5449 15.8332 13.2152 15.7077 12.9721 15.4845C12.729 15.2612 12.5924 14.9584 12.5924 14.6427V12.857C12.5924 12.5412 12.729 12.2384 12.9721 12.0152C13.2152 11.7919 13.5449 11.6665 13.8887 11.6665H15.8332V14.6427ZM4.1665 14.6427C4.1665 14.9584 4.30308 15.2612 4.54618 15.4845C4.78928 15.7077 5.119 15.8332 5.4628 15.8332H6.11095C6.45475 15.8332 6.78447 15.7077 7.02757 15.4845C7.27067 15.2612 7.40724 14.9584 7.40724 14.6427V12.857C7.40724 12.5412 7.27067 12.2384 7.02757 12.0152C6.78447 11.7919 6.45475 11.6665 6.11095 11.6665H4.1665V14.6427Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>'+event.data[i].count_listened+'</p></div></div></div><div class="some3"><svg class="some3_point" viewBox="0 0 24 24" fill="#969696"><circle class="some3_point" cx="12" cy="7" r="1.5"/><circle class="some3_point" cx="12" cy="12" r="1.5"/><circle class="some3_point" cx="12" cy="17" r="1.5"/></svg></div></div>';
+       }
+       document.getElementsByClassName('player_container_block2_b1_menu_bl2_news')[0].innerHTML=iframe_news+'<div id="loader"></div>  <div id="point_block"></div>';
+
+       dataNEWS = event.data;
+       localStorage.news = JSON.stringify(event.data);
+       localStorage.podcast_id == 0;
+
+       setTimeout(() => {
+          document.getElementsByClassName('some1 n')[localStorage.track_id].firstElementChild.click();
+       }, 50);
+   }else{
+       var iframe_podcasts='';
+       for(var i=0;i<event.data.item.length;i++){
+           iframe_podcasts+='<div data-id="'+i+'" class="some"><div class="some1 p"><img class="some1_img" src="'+event.data.audio_img+'"></div><div class="some2"><p class="some2_text">'+event.data.item[i].audio_name+'</p><div class="some2_container"><div><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="6" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 6.6665V10.8332H12.5" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>'+event.data.item[i].duration+' мин</p></div><div><svg viewBox="0 0 20 20" fill="none" ><path d="M4.1665 14.1665V10.1665C4.1665 8.57521 4.78109 7.04908 5.87505 5.92386C6.96901 4.79865 8.45274 4.1665 9.99984 4.1665C11.5469 4.1665 13.0307 4.79865 14.1246 5.92386C15.2186 7.04908 15.8332 8.57521 15.8332 10.1665V14.1665 M15.8332 14.6427C15.8332 14.9584 15.6966 15.2612 15.4535 15.4845C15.2104 15.7077 14.8807 15.8332 14.5369 15.8332H13.8887C13.5449 15.8332 13.2152 15.7077 12.9721 15.4845C12.729 15.2612 12.5924 14.9584 12.5924 14.6427V12.857C12.5924 12.5412 12.729 12.2384 12.9721 12.0152C13.2152 11.7919 13.5449 11.6665 13.8887 11.6665H15.8332V14.6427ZM4.1665 14.6427C4.1665 14.9584 4.30308 15.2612 4.54618 15.4845C4.78928 15.7077 5.119 15.8332 5.4628 15.8332H6.11095C6.45475 15.8332 6.78447 15.7077 7.02757 15.4845C7.27067 15.2612 7.40724 14.9584 7.40724 14.6427V12.857C7.40724 12.5412 7.27067 12.2384 7.02757 12.0152C6.78447 11.7919 6.45475 11.6665 6.11095 11.6665H4.1665V14.6427Z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>'+event.data.item[i].count_listened+'</p></div></div></div><div class="some3"><svg class="some3_point" viewBox="0 0 24 24" fill="#969696"><circle class="some3_point" cx="12" cy="7" r="1.5"/><circle class="some3_point" cx="12" cy="12" r="1.5"/><circle class="some3_point" cx="12" cy="17" r="1.5"/></svg></div></div>'; 
+       }
+       document.getElementsByClassName('player_container_block2_b1_menu_bl2_podcasts')[0].innerHTML=iframe_podcasts+'<div id="loader"></div>  <div id="point_block"></div>';
+       
+       dataPODCASTS = event.data;
+       localStorage.podcasts = JSON.stringify(event.data);
+       localStorage.podcast_id == 1;
+       
+       setTimeout(() => {
+          document.getElementsByClassName('some1 p')[localStorage.track_id].firstElementChild.click();
+       }, 50);
+   }
+}
+
+document.getElementsByClassName('player_container_block1_pages')[localStorage.page ? localStorage.page[0] : 0].click();
+</script>
+</body>
+</html>

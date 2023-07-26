@@ -1,0 +1,396 @@
+<meta charset="UTF-8">
+<script>
+    if(localStorage.lang && localStorage.lang == 'dark'){
+        document.documentElement.style.setProperty('--first', '#1B1B1B');
+        document.documentElement.style.setProperty('--second', '#fff');
+    }
+</script>
+<style>
+    :root {
+        --first: #fff;
+        --second: #000;
+    }
+    
+    .news-container{
+        width: 97.5%;
+        height: 5vw;
+        background: var(--first);  
+        border-radius: 1.5vw;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3vw;
+        margin-bottom: 2vw;
+        color: var(--second);
+    }
+    
+    .news-container>div{
+        width: 18%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1.5vw;
+    }
+    
+    .news-container>div>svg{
+        width: 15%;
+        margin-right: 4%;
+        stroke: var(--second);
+    }
+    
+    .news-container-block{
+        width: 97.5%;
+        background: var(--first);  
+        border-radius: 1.5vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        color: var(--second);
+    }
+    
+    .news-container-block-menu{
+        width: 94%;
+        height: 5vw;
+        margin-left: 3%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1vw;
+    }
+    
+    .news-container-block-menu>div{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 2vw;
+    }
+    
+    .news-container-block-menu>div>div{
+        width: 3vw;
+        height: 3vw;
+        background: #F63867;
+        border-radius: 50%;
+        margin-right: 4%;
+    }
+    
+    .news-container-block-menu>div>input{
+        width: 95%;
+        height: 3.5vw;
+        padding-left: 5%;
+        background: #F5F5F5;
+        border: 0;
+        outline: 0;
+        border-radius: 1vw;
+    }
+    
+    .news-container-block-news{
+        width: 95%;
+        margin-left: 3%;
+    }
+    
+    .news_block{
+       width: 100%;
+       height: 14vw;
+       margin-bottom: 2vw;
+       border-radius: .7vw;
+       display: flex;
+    }
+    
+    .news_block_foto_container{
+        width: 15.4%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .news_block_foto_container>div{
+        background: rgb(12,24,39);
+        width: 30%;
+        height: 13%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-bottom-right-radius: .7vw;
+        border-top-left-radius: .7vw;
+    }
+    
+    .news_block_foto_container>img{
+        width: 100%;
+        height: 100%;
+        border-radius: .7vw;
+    }
+     
+    .news_block_text_container{
+        width: 80%;
+        height: 100%;
+    }
+    
+    .news_block_text_container>p,.news_block_description{
+        margin: 0 0 0.3vw 3%;
+    }
+    
+    .news_block_text_container>span{
+        margin: 0 0 0 3%;
+    }
+    
+    .all_listened{
+        font: 600 2vw Arial;
+        padding: 8vw 0;
+        text-align: center;  
+    }
+    
+    .news_block_source{
+        border-radius: 20%;
+    }
+    
+    .play_icon,.play_icon_play {
+        margin: 22% 0 0 37%;
+        border: 0.9vw solid transparent;
+        border-left: 1.3vw solid #fff;
+    }
+    
+    .news_play_block{
+        width: 3vw;
+        height: 3vw;
+        background: #F63867;
+        border-radius: 50%;
+        margin-left: 2%;
+    }
+</style>
+
+<div class="news-container">
+    <div class="main">
+       <svg class="main" viewBox="0 0 25 24" fill="none">
+          <path class="main" d="M20.1585 9.70104L13.1585 3.57604C12.7815 3.24614 12.2185 3.24614 11.8415 3.57604L4.8415 9.70104C4.62448 9.89092 4.5 10.1653 4.5 10.4536V18.9998C4.5 19.5521 4.94772 19.9998 5.5 19.9998H9.5C10.0523 19.9998 10.5 19.5521 10.5 18.9998V14.9998C10.5 14.4476 10.9477 13.9998 11.5 13.9998H13.5C14.0523 13.9998 14.5 14.4476 14.5 14.9998V18.9998C14.5 19.5521 14.9477 19.9998 15.5 19.9998H19.5C20.0523 19.9998 20.5 19.5521 20.5 18.9998V10.4536C20.5 10.1653 20.3755 9.89093 20.1585 9.70104Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+       </svg>
+       Main
+    </div>
+    <div class="not_listened">
+       <svg class="not_listened" viewBox="0 0 24 24" fill="none">
+          <path class="not_listened" d="M3 4V18C3 19.1046 3.89543 20 5 20H17H19C20.1046 20 21 19.1046 21 18V8H17 M3 4H17V18C17 19.1046 17.8954 20 19 20V20 M13 12L9 12 M13 8L7 8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+       </svg>
+       Not head
+    </div>
+    <div class="wish_list">
+       <svg class="wish_list" viewBox="0 0 20 21" fill="none">
+            <path class="wish_list" d="M16.3434 5.01226C15.9768 4.63856 15.5417 4.34211 15.0627 4.13985C14.5837 3.9376 14.0704 3.8335 13.5519 3.8335C13.0335 3.8335 12.5201 3.9376 12.0411 4.13985C11.5621 4.34211 11.127 4.63856 10.7605 5.01226L9.99981 5.78746L9.23916 5.01226C8.49882 4.25776 7.4947 3.83389 6.44771 3.83389C5.40071 3.83389 4.39659 4.25776 3.65626 5.01226C2.91592 5.76676 2.5 6.79008 2.5 7.8571C2.5 8.92412 2.91592 9.94744 3.65626 10.7019L4.41691 11.4771L9.99981 17.1668L15.5827 11.4771L16.3434 10.7019C16.71 10.3284 17.0009 9.88492 17.1994 9.39679C17.3979 8.90867 17.5 8.38547 17.5 7.8571C17.5 7.32873 17.3979 6.80554 17.1994 6.31741C17.0009 5.82928 16.71 5.38579 16.3434 5.01226V5.01226Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+       </svg>
+       Wish List
+    </div>
+    <div class="sourses">
+       <svg class="sourses" viewBox="0 0 24 24" fill="none">
+            <path class="sourses" d="M12.7309 16.4078H12.1898L12.2325 16.9472C12.2559 17.2437 12.2807 17.5359 12.3052 17.8252C12.3676 18.5619 12.4284 19.28 12.4622 20.0038C12.4686 20.1392 12.4636 20.2853 12.442 20.407C12.435 20.4459 12.4275 20.4763 12.4205 20.4996C12.4133 20.4994 12.4055 20.4991 12.3972 20.4986C12.3365 20.4956 12.267 20.4878 12.1851 20.4774C12.1672 20.4751 12.1481 20.4726 12.1282 20.47C12.0652 20.4617 11.9945 20.4524 11.9311 20.446C11.1043 20.3626 10.5872 19.9886 10.1799 19.4467C9.81201 18.9573 9.54807 18.3544 9.25251 17.6793C9.20007 17.5595 9.14663 17.4375 9.09145 17.3134L8.92539 16.94L8.52642 17.0284C8.33617 17.0706 8.16298 17.1132 7.99934 17.1535C7.67413 17.2336 7.38659 17.3044 7.07765 17.3436C6.59203 17.4053 6.17035 17.3808 5.79908 17.2576C5.43304 17.1362 5.08716 16.9093 4.76288 16.5199C4.17425 15.8129 3.76376 14.7737 3.59073 13.734C3.41526 12.6797 3.50199 11.7389 3.78354 11.2061C3.91008 10.9667 4.14698 10.7375 4.34223 10.6547L4.14703 10.1943L4.34223 10.6547C7.85097 9.16683 11.0253 7.14527 13.4334 3.9838C13.4539 3.95692 13.4953 3.91916 13.6079 3.84495C13.6284 3.83142 13.6522 3.81611 13.6786 3.7992C13.7529 3.75147 13.8471 3.69104 13.9419 3.62213C15.4588 3.20252 16.8898 3.87859 18.0919 5.58495C19.5353 7.63376 20.3378 9.92723 20.4931 12.3852C20.5598 13.4414 20.1405 14.6083 19.6999 15.7776C19.6172 15.9971 19.3944 16.187 18.9925 16.3138C18.5974 16.4385 18.1131 16.4721 17.6801 16.4407C16.5403 16.3581 15.3815 16.3754 14.2119 16.393C13.7199 16.4004 13.2261 16.4078 12.7309 16.4078ZM5.3099 10.7268L5.52196 11.1135L5.3099 10.7268C5.27001 10.7487 5.22732 10.7717 5.18252 10.7958C4.90947 10.9425 4.55842 11.1312 4.29033 11.3746C3.94396 11.689 3.68426 12.1375 3.77696 12.7533C3.92834 13.7588 4.26459 14.7916 4.76207 15.6818C4.97807 16.0683 5.2756 16.4505 5.72208 16.6794C6.18015 16.9142 6.72228 16.9511 7.35056 16.7843C8.46764 16.4877 9.6106 16.3844 10.8011 16.2769C11.3169 16.2303 11.8415 16.1829 12.3769 16.1187C12.9567 16.0491 13.5361 15.9821 14.156 15.9105C14.4488 15.8767 14.7506 15.8418 15.0657 15.8051L16.0203 15.694L15.3813 14.976C13.3981 12.7478 12.715 10.0712 12.3879 7.14409L12.2942 6.3058L11.6037 6.79035L11.602 6.79158C10.8268 7.33557 10.0653 7.87 9.20222 8.50693C8.82634 8.72232 8.45263 8.93825 8.07984 9.15366C7.15729 9.68671 6.24035 10.2165 5.3099 10.7268ZM13.3016 4.95974C13.1016 5.40624 13.0407 5.93837 13.0249 6.3867L13.0205 6.40325L13.0198 6.40624C13.0121 6.43537 12.9931 6.50735 12.9903 6.57722C12.9897 6.59123 12.9891 6.61882 12.9928 6.65307L12.9929 6.65439C12.9951 6.67468 13.0051 6.76924 13.0678 6.8683C13.105 6.92714 13.1776 7.01362 13.3019 7.06427C13.3225 7.07267 13.3429 7.07945 13.3632 7.08479C13.9968 7.68215 14.5705 8.22316 15.2239 8.84107C16.1784 10.6335 16.7061 12.2648 15.6875 14.0171L15.5048 14.3312L15.7473 14.6019C16.1539 15.0559 16.5433 15.4159 16.9183 15.6638C17.2908 15.9101 17.6857 16.0698 18.0912 16.0611C18.9649 16.0424 19.4924 15.2912 19.8283 14.3742C19.9305 14.0953 19.9488 13.779 19.9616 13.56C19.9637 13.5238 19.9656 13.4903 19.9677 13.4601C20.1937 10.2708 19.0923 7.52346 17.1403 5.18896C16.8499 4.84159 16.4348 4.53845 16.0032 4.32728C15.576 4.11827 15.0772 3.97245 14.6132 4.00195C13.9299 4.04539 13.5197 4.47318 13.3016 4.95974ZM13.022 6.43465C13.022 6.43464 13.0221 6.43422 13.0223 6.43339L13.022 6.43465ZM14.4893 12.9122L14.7777 13.5188L15.276 13.0685C15.2846 13.0608 15.3027 13.0464 15.3412 13.0187C15.3481 13.0138 15.3562 13.008 15.3652 13.0016C15.3956 12.9799 15.4359 12.9512 15.4704 12.9248C15.5146 12.891 15.5823 12.8365 15.6415 12.7666C15.693 12.7056 15.8044 12.5561 15.7954 12.3413C15.7292 10.7685 15.2745 9.26504 13.8411 8.21574L12.8656 7.50162L13.0518 8.69617C13.1639 9.41611 13.3553 10.0998 13.5868 10.7582C13.8296 11.4487 14.1128 12.1206 14.4893 12.9122ZM10.9339 16.7353L10.8742 16.7254L10.8137 16.7301L10.2284 16.7759L9.58664 16.826L9.79399 17.4354L9.79712 17.4446C9.93352 17.8455 10.04 18.1584 10.1308 18.3989C10.2207 18.6367 10.3076 18.838 10.4121 18.999C10.5278 19.1773 10.6652 19.3067 10.8437 19.4004C10.9866 19.4755 11.1482 19.5213 11.2823 19.5593C11.2904 19.5615 11.2983 19.5638 11.3062 19.566L11.983 19.7584L11.942 19.056C11.935 18.9353 11.9294 18.8068 11.9236 18.6731C11.9074 18.2992 11.8894 17.8849 11.8329 17.4882C11.7931 17.2093 11.6034 17.0296 11.4568 16.9327C11.3003 16.8292 11.1152 16.7651 10.9339 16.7353Z" fill="#0C1827"/>
+        </svg>
+        Sourses
+    </div>
+    <div class="history">
+       <svg class="history" viewBox="0 0 24 24" fill="none">
+            <path class="history" d="M6.5 17.5C9.53757 20.5376 14.4624 20.5376 17.5 17.5C20.5376 14.4624 20.5376 9.53756 17.5 6.5C14.4624 3.46243 9.53757 3.46243 6.5 6.5C4.98024 8.01976 4.22085 10.0119 4.22183 12.0038L4.22181 13.7285 M2.49329 12L4.22177 13.7285L5.95025 12 M11 8L11 13L16 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+       </svg>
+       History
+    </div>
+</div>
+
+<div class="news-container-block">
+   <div class="news-container-block-menu">
+       <div>
+           <div><div class="play_icon"></div></div>
+           News
+       </div>
+       <div>
+           <input id="search" oninput="search_input(this.value)" type="search" placeholder="Search">
+       </div>
+   </div>
+   <div class="news-container-block-news"></div>
+</div>
+
+
+<script src="sound.js"></script>
+<script>   
+document.onclick=e=>{
+    if( e.target.getAttribute('class') == 'main' ){
+        var news_block='';
+        for(var i in news){
+           news_block+='<div class="news_block"><div class="news_block_foto_container"><img src="'+news[i].audio_img+'"><div></div></div><div class="news_block_text_container"><p class="news_block_text_container_name">'+news[i].audio_name+'</p><span class="news_block_text_container_author">'+news[i].author+'</span></div></div>';
+        }
+        document.getElementsByClassName('news-container-block-news')[0].innerHTML=news_block;
+        
+        document.getElementsByClassName('main')[0].style.color='#44C9C5';
+        document.getElementsByClassName('main')[0].style.background='#E2F8F7';
+        document.getElementsByClassName('main')[1].style.stroke='#44C9C5';
+        
+        if(localStorage.page.length == 2 && localStorage.page[1] != 0){
+           document.getElementsByTagName('svg')[localStorage.page[1]].parentNode.style.background = '';
+           document.getElementsByTagName('svg')[localStorage.page[1]].parentNode.style.color = '';
+           document.getElementsByTagName('svg')[localStorage.page[1]].style.stroke = '';
+        }
+        localStorage.page = 10;
+        search_input(document.getElementById('search').value);
+    }else if( e.target.getAttribute('class') == 'not_listened' ){
+        var news_block='';
+        var ravenstvo = 0;
+        if(localStorage.history && localStorage.history.length >2){
+            for(var i in news){
+                for(var w=0;w<JSON.parse(localStorage.history).length;w++){
+                    if(JSON.parse(localStorage.history)[w] == news[i].id){
+                       ravenstvo = 1;
+                    }
+                }
+                if(ravenstvo == 0){
+                   news_block+='<div class="news_block"><div class="news_block_foto_container"><img src="'+news[i].audio_img+'"><div></div></div><div class="news_block_text_container"><p class="news_block_text_container_name">'+news[i].audio_name+'</p><span class="news_block_text_container_author">'+news[i].author+'</span></div></div>';
+                }else{
+                   ravenstvo = 0; 
+                }
+            }
+
+            if(news_block.length == 0){
+                news_block='<p class="all_listened">All audio listened</p>';
+            }
+        }else{
+            for(var i in news){
+               news_block+='<div class="news_block"><div class="news_block_foto_container"><img src="'+news[i].audio_img+'"><div></div></div><div class="news_block_text_container"><p class="news_block_text_container_name">'+news[i].audio_name+'</p><span class="news_block_text_container_author">'+news[i].author+'</span></div></div>'; 
+            }
+        }
+        
+        document.getElementsByClassName('news-container-block-news')[0].innerHTML=news_block;
+        
+        document.getElementsByClassName('not_listened')[0].style.color='#44C9C5';
+        document.getElementsByClassName('not_listened')[0].style.background='#E2F8F7';
+        document.getElementsByClassName('not_listened')[1].style.stroke='#44C9C5';
+        
+        if(localStorage.page && localStorage.page[1] != 1){
+           document.getElementsByTagName('svg')[localStorage.page[1]].parentNode.style.background = '';
+           document.getElementsByTagName('svg')[localStorage.page[1]].parentNode.style.color = '';
+           document.getElementsByTagName('svg')[localStorage.page[1]].style.stroke = '';
+        }
+        localStorage.page = 11;
+        search_input(document.getElementById('search').value);
+    }else if( e.target.getAttribute('class') == 'wish_list' ){
+        alert('this page is not work yet');
+        document.getElementsByClassName('wish_list')[0].style.color='#44C9C5';
+        document.getElementsByClassName('wish_list')[0].style.background='#E2F8F7';
+        document.getElementsByClassName('wish_list')[1].style.stroke='#44C9C5';
+        
+        if(localStorage.page && localStorage.page[1] != 2){
+           document.getElementsByTagName('svg')[localStorage.page[1]].parentNode.style.background = '';
+           document.getElementsByTagName('svg')[localStorage.page[1]].parentNode.style.color = '';
+           document.getElementsByTagName('svg')[localStorage.page[1]].style.stroke = '';
+        }
+        localStorage.page = 12;
+        document.getElementsByClassName('news-container-block-news')[0].innerHTML = '';
+    }else if( e.target.getAttribute('class') == 'sourses' ){
+        var sources={};
+        for(var i in news){
+            if(sources[news[i].author]){
+               sources[news[i].author].push(i);
+            }else{
+               sources[news[i].author]=[i];
+            }
+        }
+        console.log(sources);
+        console.log(sources['Руки Вверх'].length);
+        var news_block='';
+        for(var i in sources){
+           news_block+='<div class="news_block"><img class="news_block_source" src="'+news[sources[i][0]].audio_img+'"><span class="news_block_description">'+i+'</span><span>- '+sources[i].length +' track'+'</span><div data-id="['+sources[i]+']" class="news_play_block"><div class="play_icon_play"></div></div></div>';
+        }
+        document.getElementsByClassName('news-container-block-news')[0].innerHTML=news_block;
+        
+        document.getElementsByClassName('sourses')[0].style.color='#44C9C5';
+        document.getElementsByClassName('sourses')[0].style.background='#E2F8F7';
+        document.getElementsByClassName('sourses')[1].style.stroke='#44C9C5';
+        
+        if(localStorage.page && localStorage.page[1] != 3){
+           document.getElementsByTagName('svg')[localStorage.page[1]].parentNode.style.background = '';
+           document.getElementsByTagName('svg')[localStorage.page[1]].parentNode.style.color = '';
+           document.getElementsByTagName('svg')[localStorage.page[1]].style.stroke = '';
+        }
+        localStorage.page = 13;
+        search_input(document.getElementById('search').value);
+    }else if( e.target.getAttribute('class') == 'history' ){
+         var news_block='';
+         if(localStorage.history && localStorage.history.length > 0){
+            for(var w=0;w<JSON.parse(localStorage.history).length;w++){
+               news_block+='<div class="news_block"><div class="news_block_foto_container"><img src="'+news[JSON.parse(localStorage.history)[w]].audio_img+'"><div></div></div><div class="news_block_text_container"><p>'+news[JSON.parse(localStorage.history)[w]].audio_name+'</p><span>'+news[JSON.parse(localStorage.history)[w]].author+'</span></div></div>'; 
+            } 
+         }else{
+            news_block='<p class="all_listened">No listened news</p>'; 
+         }
+         document.getElementsByClassName('news-container-block-news')[0].innerHTML=news_block;
+        
+         document.getElementsByClassName('history')[0].style.color='#44C9C5';
+         document.getElementsByClassName('history')[0].style.background='#E2F8F7';
+         document.getElementsByClassName('history')[1].style.stroke='#44C9C5';
+        
+         if(localStorage.page && localStorage.page[1] != 4){
+           document.getElementsByTagName('svg')[localStorage.page[1]].parentNode.style.background = '';
+           document.getElementsByTagName('svg')[localStorage.page[1]].parentNode.style.color = '';
+           document.getElementsByTagName('svg')[localStorage.page[1]].style.stroke = '';
+         }
+         localStorage.page = 14;
+    }else if( e.target.className == 'news_play_block' || e.target.className == 'play_icon_play'){
+         var news_massiv=[];
+         var id = e.target.getAttribute('data-id') || e.target.parentNode.getAttribute('data-id');  
+         id = JSON.parse(id);
+        
+         for(var i=0; i<id.length; i++){
+             news_massiv.push(news[id[i]]);
+         }
+        
+         localStorage.track_id = 0;       
+         window.parent.postMessage(news_massiv , '*');
+    }
+}
+
+
+
+window.onmessage = function(event) {
+    if( event.data == 'dark_theme'){
+        document.documentElement.style.setProperty('--first', '#1B1B1B');
+        document.documentElement.style.setProperty('--second', '#fff');
+    }else{
+        document.documentElement.style.setProperty('--first', '#fff');
+        document.documentElement.style.setProperty('--second', '#000');
+    }
+}
+
+
+document.getElementsByTagName('svg')[localStorage.page.length == 2 ? localStorage.page[1] : 0].parentNode.click();
+    
+
+    
+function search_input(qw){
+    if(qw != ''){ 
+        for(var i=0;i<document.getElementsByClassName('news_block').length;i++){
+            if(document.getElementsByClassName('news_block')[i].style.display != 'none'){
+                var ss='';
+                var so=''
+                for(var q=0;q<document.getElementsByClassName('news_block_text_container_name')[i].innerText.length;q++){
+                    if(document.getElementsByClassName('news_block_text_container_name')[i].innerText.substr(q,qw.length) == qw){
+                        ss+='<mark>'+document.getElementsByClassName("news_block_text_container_name")[i].innerText.substr(q,qw.length)+'</mark>';
+                        q+=(qw.length - 1);
+                    }else{
+                        ss+=document.getElementsByClassName('news_block_text_container_name')[i].innerText[q];
+                    }
+                }
+                
+                for(var q=0;q<document.getElementsByClassName('news_block_text_container_author')[i].innerText.length;q++){
+                    if(document.getElementsByClassName('news_block_text_container_author')[i].innerText.substr(q,qw.length) == qw){
+                        so+='<mark>'+document.getElementsByClassName("news_block_text_container_author")[i].innerText.substr(q,qw.length)+'</mark>';
+                        q+=(qw.length - 1);
+                    }else{
+                        so+=document.getElementsByClassName('news_block_text_container_author')[i].innerText[q];
+                    }
+                }
+                document.getElementsByClassName('news_block_text_container_name')[i].innerHTML=ss;
+                document.getElementsByClassName('news_block_text_container_author')[i].innerHTML=so;
+             }
+        }
+    }else{
+        for(var i=0;i<document.getElementsByClassName('news_block_text_container_name').length;i++){
+            document.getElementsByClassName('news_block_text_container_name')[i].innerHTML = document.getElementsByClassName('news_block_text_container_name')[i].innerText;
+        }
+        
+        for(var i=0;i<document.getElementsByClassName('news_block_text_container_author').length;i++){
+            document.getElementsByClassName('news_block_text_container_author')[i].innerHTML = document.getElementsByClassName('news_block_text_container_author')[i].innerText;
+        }
+    }
+}
+</script>
