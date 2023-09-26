@@ -174,47 +174,47 @@ var news={
 var podcasts={
     0:{
         "id":0,
-        "podcast_name":"Почему мы еще живы",
-        "audio_img":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/69/2e/50/692e50ba-f9ec-3ea3-3e46-a0cbe2081247/mza_6375028511246448148.png/80x80bb.jpg",
+        "podcast_name":"Максим Кац",
+        "audio_img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpuF27jc6d7iLvh4fu8jfHk_e2dGUwf5KQO_aF6k9xYE_Nu-h2",
         "lang": "English",
         "type": "science",
         "item":[
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Почему они еще живы: трейлер подкаста «Студия»",
+                "file_link":"https://www.buzzsprout.com/1363327/13655004-25.mp3",
+                "audio_name":"Причины провала миссии Роскосмоса",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://www.buzzsprout.com/1363327/13654995-.mp3",
+                "audio_name":"Как союзники пришли на помощь СССР",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://www.buzzsprout.com/1363327/13442256-.mp3",
+                "audio_name":"Как Украина воюет на море",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://www.buzzsprout.com/1363327/13442202-.mp3",
+                "audio_name":"Гений против государственной машины",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://www.buzzsprout.com/1363327/13442245-.mp3",
+                "audio_name":"Пропаганда для школьников",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
