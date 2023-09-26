@@ -387,7 +387,7 @@ window.onclick=e=>{
             }
         }
         window.parent.postMessage(news_massiv , '*');
-    }else if((e.target.className == 'load_track_p' || e.target.className) == 'search-filter-result-div-play_p'){   
+    }else if(e.target.className == 'load_track_p' || e.target.className == 'search-filter-result-div-play_p'){   
          localStorage.track_id =0;
          window.parent.postMessage(podcasts[e.target.getAttribute('data-id') || e.target.firstChild.getAttribute('data-id')] , '*');
     }
