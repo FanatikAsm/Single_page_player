@@ -270,47 +270,47 @@ var podcasts={
     },
     2:{
         "id":2,
-        "podcast_name":"metasploit",
-        "audio_img":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/69/2e/50/692e50ba-f9ec-3ea3-3e46-a0cbe2081247/mza_6375028511246448148.png/80x80bb.jpg",
+        "podcast_name":"Веб-стандарты",
+        "audio_img":"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTXDDPMu65RYNHZ9CMhtSvaG9zHA-NhhPmxAPUezDzSr5d5n9VX",
         "lang": "Japan",
         "type": "media",
         "item":[
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Почему они еще живы: трейлер подкаста «Студия»",
+                "file_link":"https://web-standards.ru/podcast/episodes/388.mp3",
+                "audio_name":"Safari 17 и TP 179, :has в Firefox, State of HTML, Scroll-Driven Animations",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://web-standards.ru/podcast/episodes/387.mp3",
+                "audio_name":"Chrome 117 и бета 118, DevTools",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://web-standards.ru/podcast/episodes/386.mp3",
+                "audio_name":"Safari, Firefox, Bun, Node.js, веб-фичи, Figma, марсианский плагин, Topics",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://web-standards.ru/podcast/episodes/385.mp3",
+                "audio_name":"Firefox 117, form-sizing и релизы Chrome, State of CSS 2023, велосипеды Dropbox, Astro 3.0",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://web-standards.ru/podcast/episodes/384.mp3",
+                "audio_name":"Новинки Safari TP, эксклюзивный аккордеон, словарь терминов веб-разработки",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
@@ -318,47 +318,47 @@ var podcasts={
     },
     3:{
         "id":3,
-        "podcast_name":"metasploit",
-        "audio_img":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/69/2e/50/692e50ba-f9ec-3ea3-3e46-a0cbe2081247/mza_6375028511246448148.png/80x80bb.jpg",
+        "podcast_name":"Naked Science",
+        "audio_img":"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTM2BWw8l96X-7XFw-l8zAeYlyDblZLED7G8ZyElJI8wZXRIpU",
         "lang": "Japan",
         "type": "media",
         "item":[
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Почему они еще живы: трейлер подкаста «Студия»",
+                "file_link":"https://cdn.simplecast.com/audio/bb6a4397-92a6-4db6-ad0d-cababd5ac3e5/episodes/097e75b0-b3d8-4475-b921-f718f21ec039/audio/32d80095-a453-493f-9272-fc8ff7155b92/default_tc.mp3?aid=rss_feed&feed=syOvCl_n",
+                "audio_name":"C точки зрения науки №145",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://cdn.simplecast.com/audio/bb6a4397-92a6-4db6-ad0d-cababd5ac3e5/episodes/e4d228aa-a18b-4ff9-b699-407790b4dc23/audio/d42e3183-5597-4f22-8fea-6aba79438a66/default_tc.mp3?aid=rss_feed&feed=syOvCl_n",
+                "audio_name":"C точки зрения науки №144",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://cdn.simplecast.com/audio/bb6a4397-92a6-4db6-ad0d-cababd5ac3e5/episodes/16270547-f363-4708-9943-8f9dd50cd2f7/audio/219ca1ef-2ff7-4186-917f-8fd614145161/default_tc.mp3?aid=rss_feed&feed=syOvCl_n",
+                "audio_name":"C точки зрения науки №143",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://cdn.simplecast.com/audio/bb6a4397-92a6-4db6-ad0d-cababd5ac3e5/episodes/f3340353-2eca-42ae-a2ca-fc9bc8169c9d/audio/fbccb47e-3122-46ef-8439-52478a1be47a/default_tc.mp3?aid=rss_feed&feed=syOvCl_n",
+                "audio_name":"C точки зрения науки №142",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://cdn.simplecast.com/audio/bb6a4397-92a6-4db6-ad0d-cababd5ac3e5/episodes/ba62b3cd-93b9-4cc4-a12a-3eff17fffdf5/audio/c24f961c-168c-4b42-9194-c8bc1d13bb1f/default_tc.mp3?aid=rss_feed&feed=syOvCl_n",
+                "audio_name":"C точки зрения науки №141",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
