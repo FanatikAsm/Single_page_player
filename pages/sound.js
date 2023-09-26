@@ -144,7 +144,7 @@ var news={
       "lang" : "Japan",
       "type" : "advertising",
       "like" : "0", 
-      "file_link" : "https://dl2.mp3party.net/online/10292668.mp3",
+      "file_link" : "https://i200.123muza.com/api/song/download/get/11/CHVRN-Awakening-textmp3.ru.mp3?origin=textmp3.ru&url=sid%3A%2F%2F474499210_456769508_09389be3d1b15913bc_2070ac58517e11c5d1&artist=CHVRN&title=Awakening&index=0&user_id=193215062&future_urls=sid%3A%2F%2F2000333167_409020384_cfe7db4d43d4e76261_84a6627fae0627b209%2Csid%3A%2F%2F184376517_456264098_56613c0929b02d9674_ceba7c9b92bd5324d2%2Csid%3A%2F%2F193606234_456241425_c47c568041908f6c76_a4c761a231ee176cda%2Csid%3A%2F%2F545210357_456239301_02f69c906ebe8f78b5_a26268d384423535ee%2Csid%3A%2F%2F348076968_456240769_ebbeaf2cd766205c7b_7e755b72b5fece5b75%2Csid%3A%2F%2F247582044_456239245_f68cf853417bc7dbdf_03ee4798e71434ddb9%2Csid%3A%2F%2F269263593_456239983_7084ef78ed3cfba3c8_63ee0e5056c6ba54ab%2Csid%3A%2F%2F481118095_456240797_c38346f331c743fbe5_b3ff9cc978c9014ce9%2Csid%3A%2F%2F227464008_456296352_e6f9c0e07912f03b3c_07f5e35494695e5775",
       "audio_img" : "https://zvon.top/img/collections/347631_small.jpg",
       "audio_name" : "Awakening",
       "author" : "Chvrn",
