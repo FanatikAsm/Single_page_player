@@ -381,7 +381,7 @@ window.onclick=e=>{
             if(document.getElementsByClassName('search-filter-result-div')[i].style.display != 'none'){
                 track_id++;
                 news_massiv.push(news[document.getElementsByClassName('load_track')[i].getAttribute('data-id')]);
-                if(e.target.getAttribute('data-id') || e.target.firstChild.getAttribute('data-id') == news[document.getElementsByClassName('load_track')[i].getAttribute('data-id')].id){
+                if((e.target.getAttribute('data-id') || e.target.firstChild.getAttribute('data-id')) == news[document.getElementsByClassName('load_track')[i].getAttribute('data-id')].id){
                     localStorage.track_id =track_id;
                 }
             }
