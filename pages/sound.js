@@ -130,7 +130,7 @@ var news={
       "lang" : "Japan",
       "type" : "advertising",
       "like" : "0", 
-      "file_link" : "https://www.fisiermp3.pro/uploads/fs_anon_383296_1542564464.mp3",
+      "file_link" : "https://zenommedia.s3.us-west-001.backblazeb2.com/podcasts/agxzfnplbm8tc3RhdHNyKwsSCkF1dGhFbnRpdHkYgICwraDFtgkMCxIHUG9kY2FzdBiAgLCHguShCgyiAQdsaWJyYXJ5/episodes/agxzfnplbm8tc3RhdHNyFgsSCU1lZGlhSXRlbRiAgLC7jtWBCQyiAQdsaWJyYXJ5",
       "audio_img" : "https://i1.sndcdn.com/artworks-000441957900-znk30z-t500x500.jpg",
       "audio_name" : "Stronger",
       "author" : "Champion & Lemon Fight",
@@ -222,47 +222,47 @@ var podcasts={
     },
     1:{
         "id":1,
-        "podcast_name":"Who we are",
-        "audio_img":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/69/2e/50/692e50ba-f9ec-3ea3-3e46-a0cbe2081247/mza_6375028511246448148.png/80x80bb.jpg",
+        "podcast_name":"Жадный инвестор",
+        "audio_img":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSKpGmEOdKkp8gY52xBs_ZuFYuIZZsKKSnxNQA9hwqwOByOG4Bp",
         "lang": "Japan",
         "type": "science",
         "item":[
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Почему они еще живы: трейлер подкаста «Студия»",
+                "file_link":"https://api.mave.digital/storage/podcasts/6c8234da-5faa-4aff-b1b1-4addd7d13400/episodes/c07611b7-cd26-48bd-858c-0a6130ea8b83.mp3",
+                "audio_name":"Что покупать осенью 2023 году, чтобы закончить год с прибылью",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/6c8234da-5faa-4aff-b1b1-4addd7d13400/episodes/af43bcc5-f0c3-405c-8b2b-751661180afe.mp3",
+                "audio_name":"Все об акциях Positive Technologies: заработать на ошибках хакеров",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/6c8234da-5faa-4aff-b1b1-4addd7d13400/episodes/e6c3045a-7ec2-4c80-be37-590dcb22b296.mp3",
+                "audio_name":"Спецвыпуск. Говорим про дата-центры и во что инвестировать",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/6c8234da-5faa-4aff-b1b1-4addd7d13400/episodes/592b5ef1-d623-4745-b465-aae249411d21.mp3",
+                "audio_name":"Инвестиционные облигации — и жадная доходность, и разумная защита для инвестора",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/6c8234da-5faa-4aff-b1b1-4addd7d13400/episodes/1abecbbf-727b-4f91-b1b3-d080f8b62ae0.mp3",
+                "audio_name":"Лучший частный инвестор, миллион за победу и как стать вторым Василием Олейником",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
@@ -366,47 +366,47 @@ var podcasts={
     },
     4:{
         "id":4,
-        "podcast_name":"metasploit",
-        "audio_img":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/69/2e/50/692e50ba-f9ec-3ea3-3e46-a0cbe2081247/mza_6375028511246448148.png/80x80bb.jpg",
+        "podcast_name":"Запуск завтра",
+        "audio_img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoiM4mF1-BBW90IHLN5O0P2Cy6FwauxUiouf14VKVgJ5KD2Nc",
         "lang": "Japan",
         "type": "media",
         "item":[
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Почему они еще живы: трейлер подкаста «Студия»",
+                "file_link":"https://traffic.libsyn.com/secure/zapuskzavtra/Zap_48____bonus_02.mp3?dest-id=1701647",
+                "audio_name":"История о факапе Microsoft",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://traffic.libsyn.com/secure/zapuskzavtra/Zap_S09E15_-_James_Leonid__04.mp3?dest-id=1701647",
+                "audio_name":"Интернет в Китае. Как устроен великий китайский файрвол",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://traffic.libsyn.com/secure/zapuskzavtra/Zap_S09E14____2_0.mp3?dest-id=1701647",
+                "audio_name":"Что нового в кибербезе? Взломы блокчейна, AI-атаки и аудиты за миллионы",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://traffic.libsyn.com/secure/zapuskzavtra/Zap_S09E12___GNSS.mp3?dest-id=1701647",
+                "audio_name":"Найти себя на карте. Как GPS определяет наше местоположение",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://traffic.libsyn.com/secure/zapuskzavtra/Zap_S09E09____02.mp3?dest-id=1701647",
+                "audio_name":"Нейроинтерфейсы. Как связать компьютер с мозгом",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
@@ -414,47 +414,47 @@ var podcasts={
     },
     5:{
         "id":5,
-        "podcast_name":"metasploit",
-        "audio_img":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/69/2e/50/692e50ba-f9ec-3ea3-3e46-a0cbe2081247/mza_6375028511246448148.png/80x80bb.jpg",
+        "podcast_name":"BeardyCast: гаджеты и медиакультура",
+        "audio_img":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRPVy3pg_lVCNEVjGRgtZLYZ7VexgC9vXNJsxiSYptt2ofsceM",
         "lang": "Japan",
         "type": "news",
         "item":[
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Почему они еще живы: трейлер подкаста «Студия»",
+                "file_link":"https://traffic.libsyn.com/secure/beardycast/bc-427.mp3?dest-id=195786",
+                "audio_name":"Старт продаж iPhone, утечки в Microsoft и поддельные банковские приложения",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://traffic.libsyn.com/secure/beardycast/bc-424.mp3?dest-id=195786",
+                "audio_name":"Дождливая осень для Big Tech",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://traffic.libsyn.com/secure/beardycast/bc-421.mp3?dest-id=195786",
+                "audio_name":"Будущее киберугроз",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://traffic.libsyn.com/secure/beardycast/bc-418.mp3?dest-id=195786",
+                "audio_name":"Как современные технологии влияют на искусство",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://traffic.libsyn.com/secure/beardycast/bc-416.mp3?dest-id=195786",
+                "audio_name":"Выключаем алгоритмы и VPN",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
@@ -462,47 +462,47 @@ var podcasts={
     },
     6:{
         "id":6,
-        "podcast_name":"metasploit",
-        "audio_img":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/69/2e/50/692e50ba-f9ec-3ea3-3e46-a0cbe2081247/mza_6375028511246448148.png/80x80bb.jpg",
+        "podcast_name":"Короче, история",
+        "audio_img":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTv2airVWLQz_aArGCcmCrQ9U8HIvdqcfGqVMjO3go_D2aF4gMq",
         "lang": "English",
         "type": "news",
         "item":[
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Почему они еще живы: трейлер подкаста «Студия»",
+                "file_link":"https://api.mave.digital/storage/podcasts/8b9fd56b-2b37-40e9-8621-2ff0f68b9156/episodes/80d8a6fc-4561-4ef7-8936-176396ffc668.mp3",
+                "audio_name":"Выпуск №85. Алхимия",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/8b9fd56b-2b37-40e9-8621-2ff0f68b9156/episodes/ed83f344-9e15-4cbd-bb5e-3ddf8e52ca0b.mp3",
+                "audio_name":"Выпуск №83. Сто лет христианства в Японии",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/8b9fd56b-2b37-40e9-8621-2ff0f68b9156/episodes/9ca1c291-c0ad-4ec3-8549-6c351be61d08.mp3",
+                "audio_name":"Выпуск №79. Охота на ведьм",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/8b9fd56b-2b37-40e9-8621-2ff0f68b9156/episodes/9fbf5a33-18d7-495d-89ce-19d30159cadd.mp3",
+                "audio_name":"Выпуск №61. Забытые государства прошлого",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/8b9fd56b-2b37-40e9-8621-2ff0f68b9156/episodes/a10096da-11ca-4ac3-83a3-87c90fd2043b.mp3",
+                "audio_name":"Выпуск №56. Мифы о Японии",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
@@ -510,47 +510,47 @@ var podcasts={
     },
     7:{
         "id":7,
-        "podcast_name":"metasploit",
-        "audio_img":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/69/2e/50/692e50ba-f9ec-3ea3-3e46-a0cbe2081247/mza_6375028511246448148.png/80x80bb.jpg",
+        "podcast_name":"Заварили бизнес",
+        "audio_img":"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSe4mk2qHRiBCtKgldkoWjq4yqp4JHcznOFGJtGKesmP_H2prmj",
         "lang": "Russian",
         "type": "news",
         "item":[
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Почему они еще живы: трейлер подкаста «Студия»",
+                "file_link":"https://api.mave.digital/storage/podcasts/4b827f6a-13fe-4513-b5fa-cb7e329c6bd9/episodes/6ef4c860-fcbd-4343-8e72-a3f94b9f67e6.mp3",
+                "audio_name":"«Чтобы выбраться из кризиса нужны маленькие победы» Антон, стартап Healply",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/4b827f6a-13fe-4513-b5fa-cb7e329c6bd9/episodes/65c675cd-e93c-4e60-a01f-cec96543bab7.mp3",
+                "audio_name":"«Илон Маск вышел на связь, а я просто села на ж*пу и плакала», Аня Кадикова",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/4b827f6a-13fe-4513-b5fa-cb7e329c6bd9/episodes/8404c7fe-4c8a-4880-bd07-68999cec9c9f.mp3",
+                "audio_name":"«Ты получаешь контракт, потому что ты запомнился», Тимур Захарченко, Sales Machine",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/4b827f6a-13fe-4513-b5fa-cb7e329c6bd9/episodes/1a198d6f-a290-4815-9848-6576022364fd.mp3",
+                "audio_name":"«Нас на этом рынке сначала не принял никто». Галина Волгач, Room to me",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/4b827f6a-13fe-4513-b5fa-cb7e329c6bd9/episodes/171ddd4b-03c6-4fff-9865-a27837d31eb3.mp3",
+                "audio_name":"«Ну вы вундеркинды какие-то!» Алексей Давыдов, Flazm",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
@@ -558,47 +558,47 @@ var podcasts={
     },
     8:{
         "id":8,
-        "podcast_name":"metasploitTT",
-        "audio_img":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/69/2e/50/692e50ba-f9ec-3ea3-3e46-a0cbe2081247/mza_6375028511246448148.png/80x80bb.jpg",
+        "podcast_name":"На пенсию в 35 лет!",
+        "audio_img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8dDQFm-MULvv-fNeGf6J26IPEvKHi8MIabQjVn-yoSBtBY9lM",
         "lang": "English",
         "type": "news",
         "item":[
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Почему они еще живы: трейлер подкаста «Студия»",
+                "file_link":"https://api.mave.digital/storage/podcasts/d6c99e3f-8b1e-4abc-993d-a661339e9634/episodes/d3ca9638-1994-4310-92d0-a4df7143829b.mp3",
+                "audio_name":"Сложный процент — миф или чудо?",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/d6c99e3f-8b1e-4abc-993d-a661339e9634/episodes/2b9bc1ed-868b-4b22-aa3f-e3554fca2442.mp3",
+                "audio_name":"Лудоманы на бирже",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/d6c99e3f-8b1e-4abc-993d-a661339e9634/episodes/c96c88ca-bc59-48a5-8907-592a8c5b23a3.mp3",
+                "audio_name":"Золото вместо долларов",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/d6c99e3f-8b1e-4abc-993d-a661339e9634/episodes/38127738-1bd1-4b3c-a1cd-f4c27821b9a6.mp3",
+                "audio_name":"Стоит ли инвестировать во франшизы?",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
             },     
             {
                 "like":"0",
-                "file_link":"https://dl5.ru-music.cc/mp3/58264.mp3",
-                "audio_name":"Привет с того света: история реанимации",
+                "file_link":"https://api.mave.digital/storage/podcasts/d6c99e3f-8b1e-4abc-993d-a661339e9634/episodes/3ec4b989-b6ef-4723-93ee-5ee2680039af.mp3",
+                "audio_name":"Почему я не боюсь инфляции",
                 "count_likes":"222",
                 "count_listened":"111",
                 "duration":"10"
