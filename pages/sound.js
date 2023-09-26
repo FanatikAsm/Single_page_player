@@ -145,7 +145,7 @@ var news={
       "type" : "advertising",
       "like" : "0", 
       "file_link" : "https://dl2.mp3party.net/online/10292668.mp3",
-      "audio_img" : "https://is1-ssl.mzstatic.com/image/thumb/Music113/…a596-172e-3aba8739f7c0/artwork.jpg/316x316bb.webp",
+      "audio_img" : "https://zvon.top/img/collections/347631_small.jpg",
       "audio_name" : "Awakening",
       "author" : "Chvrn",
       "duration" : "17",
