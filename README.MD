@@ -1,10 +1,10 @@
 <img src="https://raw.githubusercontent.com/matiassingers/awesome-readme/master/icon.png" align="right" />
 
-# AudioCutter [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
+# Single_page_player [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
 > **IMPORTANT**
 > This program is not completed yet.
 <br />
-Record your sound or download mp3 file, then choise timeline and cut it in browser interface.
+Listen music,news,podcasts right in browser.
 
 
 ### Video. How is that work ?
@@ -26,7 +26,7 @@ Record your sound or download mp3 file, then choise timeline and cut it in brows
        <dd><a href="" target="blank">114kb</a></dd>
       </dl>
     </center>
-    <p align="right"><a href="" target="blank" align="right" >Audio_Cutter</a></p>
+    <p align="right"><a href="" target="blank" align="right" >Single_page_player</a></p>
     </td>
   </tr>
 </table>
@@ -43,10 +43,10 @@ Record your sound or download mp3 file, then choise timeline and cut it in brows
 
 
 🚀 There is a site which you can :
-<br />1) Record your sound, then choise one or two timelines on graphic. After that, your record sound will cut in your choice timeline
-<br />2) Download mp3 file. Choise one or two audio file. If you will choice 1 audio file , you can use two timelines for 1 sound graphic.
-<br />If you will choice 2 audio files, you will have two sound graphics timelines.
-<br />3) Cut your audio file/files and get it in new version
+<br />1) Listen news/musics/podcasts files.
+<br />2) Take like,remote next and previous (you can change time of remote),speed up - slow up.
+<br />If you reload page,program open your active track with last timeline.
+<br />3) Your own track list.You can setting it. 
    
 - 🎶 Listen podcasts.
 - 🎵 Listen news/music.
@@ -81,10 +81,12 @@ It will load the remaining files.
 
 # 🗺 Roadmap
 index.html is a main file which loads:
-- wave.js
-- cutter.js
-- lib/Mp3LameEncoder.min.js
-- lib/Mp3LameEncoder.min.js.mem
+- pages/my_stream.html
+- pages/news.html
+- pages/podcasts.html
+- pages/search.html
+- pages/sound.js
+
 <div align="center">
     <img src="docs/book/.gitbook/assets/stack.gif">
 </div>
@@ -100,5 +102,5 @@ a discussion in this repository or write to e-mail
 
 
 # 📘 License
-[MIT © Mark Filippov](https://github.com/FanatikAsm/AudioCutter/blob/main/LICENSE.TXT)   
+[MIT © Mark Filippov](https://github.com/FanatikAsm/Single_page_player/blob/main/LICENSE.TXT)   
 Copyright © «2023» «FanatikAsm»
