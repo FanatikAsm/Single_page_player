@@ -14,7 +14,6 @@ Listen music,news,podcasts right in browser.
   <tr>
     <td>
     <center>
-      <a href="" target="blank"><img src="y_min.svg" alt="youtube" align="left" /></a>
       <dl>
        <dt><b>All project weight</b></dt>
        <dd><a href="" target="blank">187,8kb</a></dd>
